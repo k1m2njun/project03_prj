@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+{%load static%}
 <html lang="ko">
 
   <head style="padding-top: 80px;">
@@ -11,8 +12,55 @@
     <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css' />
-
   </head>
+
+  <body style="padding-top: 80px;">
+    <!-- 80 픽셀 여유를 두고 page container 아래를 찍어줌(메뉴에 가려지지 않게)-->
+    <!-- 네비게이션바 start -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <!--fixed-top : 메뉴를 상단에 고정-->
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">오늘 뭐 먹지</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog_list.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about_me.html">About Me</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                나의 냉장고
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/ingredients/">나의 냉장고</a></li>
+                <li><a class="dropdown-item" href="/ingredients/upload_image/">이미지로 재료입력</a></li>
+                <li>
+                  <a class="dropdown-item" href="/ingredients/upload_text/">텍스트로 재료입력</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- 로그인 start -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+          </li>
+        </ul>
+        <!-- 로그인 end -->
+      </div>
+    </nav>
+    <!-- 네비게이션바 end -->
+
   <br/>
   <h1>이미지로 인식하기 - 나의 냉장고</h1>
   <nav>
@@ -67,7 +115,7 @@
     </div>
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button type="button" class="btn btn-outline-dark">확인</button>
-    </div>
+      </div>
   </body>
 
 </html>
