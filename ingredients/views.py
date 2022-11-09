@@ -25,21 +25,20 @@ def post_list(request):
         }
     )
 
+
 def upload_text(request):
-    
-    return render(
-        request,
-        'ingredients/upload_text.html',
-    )
-
-def create(request):
     if(request.method == 'POST'):
-        post = Post()
-        post.title = request.POST['names_str']
-        post.body = request.POST['date_mon']
-        post.save()
-        return redirect('ingredients')
-
+        form=TextForm(request.POST)
+        if form.is_valid():
+            ing = form.save(commit=False)
+            ing.save()
+            return redirect('ingredients')
+    else:
+        form=TextForm()
+    context={'form':form}
+    return render(
+            request,
+            'ingredients/upload_text.html',context)
 
 
 def upload_image(request):

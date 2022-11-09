@@ -1,20 +1,20 @@
-
 {%block head_title%}텍스트로 입력 - 재료입력{%endblock%}
 {%block main_area%}
     <h1>텍스트로 입력</h1>
-    <hr/>
-    <form action="{% url 'create' %}" method="post">{% csrf_token %}
-        <table>
-                <tr>
-                  <th>재료명</th>
-                  <td><input type="text" name="names_str" id="id_names_str"</td>  
-                  <th>유통기한</th>
-                  <td><input type="date" name="date_mon" id="id_date_mon"</td>  
-                </tr>
-                <!-- {{form}} -->
-        </table>
+    <!-- <hr/> -->
+    <form method="post">
+        {% csrf_token %}
+        <!-- <div>
+            <label for="names_str">재료명</label><br>
+            <input type="text" name="names_str" id="names_str">  
+        </div>
+        <div>
+            <label for="date_mon">유통기한</label><br>
+            <input type="date" name="date_mon" id="date_mon"> 
+        </div> -->
+            {{form.as_p}}
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button type="submit" class="btn btn-outline-dark">확인</button>
         </div>
     </form>
-    {%endblock%}
+{%endblock%}
