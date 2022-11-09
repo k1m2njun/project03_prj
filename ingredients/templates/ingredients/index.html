@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>My Ingredients</title>
+</head>
+<body>
+    <h1>나의 냉장고</h1>
+<table class="table_data ">
+    <thead id="thead">
+      <tr>
+        <th>번호</th>
+        <th>재료명</th>
+        <th>유통기한</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      {% for p in posts %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{ p.ingredient }}</td>
+        <td>{{p.expiration_date|date:'Y-m-d'}}</td>
+      </tr>
+      {%  endfor %}
+    </tbody>
+
+
+</body>
+</html>
+
+
+
+<!--재료 목록-->
+<!-- {%for p in posts%}
+
+    <h3>{{ p.ingredient }}</h3>
+    <h5>{{ p.expiration_date }}</h5>
+    <h5>{{ p.check }}</h5>
+{%endfor%} -->
