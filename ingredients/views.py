@@ -1,6 +1,18 @@
+from django.shortcuts import render,redirect
+from django.views.generic import ListView,DetailView,CreateView,UpdateView
+from .models import Post,MnistImage
+from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
+from django.core.exceptions import PermissionDenied
+from django.utils.text import slugify
+from tensorflow.keras.models import load_model
+from PIL import Image
+import numpy as np
+import pandas as pd
+import logging
+# import cv2
+
 from django import forms 
 from django.shortcuts import render,redirect
-from django.views.generic import CreateView
 from .models import Post
 from .forms import TextForm
 
@@ -41,9 +53,44 @@ def upload_text(request):
             'ingredients/upload_text.html',context)
 
 
-def upload_image(request):
+# def upload_image(request):
     
+#     return render(
+#         request,
+#         'ingredients/upload_image.html',
+#     )
+
+class MnistImageCreate(CreateView):
+    model= MnistImage
+    fields=['head_image']
+
+def image_result(request,pk):
+    data = MnistImage.objects.get(pk=pk)
+    
+    logging.basicConfig(level=logging.WARNING)
+    logging.debug('Here you have some information for debugging.')
+    logging.info('Everything is normal. Relax!')
+    logging.warning('Something unexpected but not important happend.')
+    logging.error('Something unexpected and important happened.')
+    logging.critical('OMG!!! A critical error happend and the code cannot run!')
+    
+    img = Image.open(data.head_image)
+    img = np.array(img)
+    img = img.reshape(1, 128, 128, 3)
+    loaded_model = load_model("model_lb5_128_plus_vgg_8282.h5")
+    pred = loaded_model.predict(img)
+    pred = np.argmax(pred[0])
+    
+    label_index = ['당근', '계란', '대파', '양파', '식빵']
+    result = label_index[pred]
+    
+    data.result = result
+    # logging.debug(cust)
+    data.save()
     return render(
         request,
-        'ingredients/upload_image.html',
+        'blog/result.html',
+        {
+            'result':result,
+        }
     )
