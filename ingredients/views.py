@@ -26,11 +26,45 @@ from PIL import Image
 #         # current_user = self.request.user  # request 안에 유저 로그인 정보가 담겨져 서버에 전달
 #         return super(TextCreateView,self).form_valid(form) # db쪽에 저장되고 redirect
 
+# def StockListView(request):
+#     try:
+#         cursor = connection.cursor()
+#         query = '''INSERT INTO ingredients_post (ingredient)
+#                     SELECT result
+#                     FROM ingredients_mnistimage'''
+#         result = cursor.execute(query)
+#         stocks = cursor.fetchall()
 
+#         connection.commit()
+#         connection.close()
+
+#     except:
+#         connection.rollback()
+#         print("Failed Selecting in StockList")
+    
+#     context = {'stocks' : stocks}
+
+#     return render(request, 'post_list.html', context)
 
 def post_list(request):
     posts = Post.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
+    # try:
+    #     cursor = connection.cursor()
+    #     query = '''INSERT INTO ingredients_post (ingredient)
+    #                 SELECT result
+    #                 FROM ingredients_mnistimage'''
+    #     result = cursor.execute(query)
+    #     stocks = cursor.fetchall()
+
+    #     connection.commit()
+    #     connection.close()
+
+    # except:
+    #     connection.rollback()
+    #     print("Failed Selecting in StockList")
     
+    # context = {'stocks' : stocks}
+
     return render(
         request,
         'ingredients/post_list.html',
@@ -98,6 +132,27 @@ def image_result(request,pk):
     data.result = result
     # logging.debug(cust)
     data.save()
+    
+    try:
+        cursor = connection.cursor()
+        query = '''INSERT INTO ingredients_post (ingredient)
+                    SELECT result
+                    FROM ingredients_mnistimage
+                    WHERE id=(
+                        SELECT max(id) FROM ingredients_mnistimage
+                        )'''
+        results = cursor.execute(query)
+        stocks = cursor.fetchall()
+
+        connection.commit()
+        connection.close()
+
+    except:
+        connection.rollback()
+        print("Failed Selecting in StockList")
+    
+    # context = {'stocks' : stocks}
+    
     return render(
         request,
         'ingredients/result.html',
@@ -105,3 +160,9 @@ def image_result(request,pk):
             'result':result,
         }
     )
+    
+
+from django.shortcuts import render
+from django.db import connection
+
+

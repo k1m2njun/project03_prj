@@ -88,7 +88,7 @@
     <div class="mb-3">
         <label for="expiration_date" class="form-label">유통기한</label>
         <input type="date" class="form-control" name="expiration_date" id="expiration_date"
-            value="{{ form.expiration_date.value|default_if_none:'' }}">
+            value="{{ form.expiration_date.value|default_if_none:'-' }}">
     </div>
     <!-- <div>
             <label for="names_str">재료명</label><br>
