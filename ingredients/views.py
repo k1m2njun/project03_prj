@@ -9,12 +9,14 @@ from PIL import Image
 import numpy as np
 import pandas as pd
 import logging
-# import cv2
+import cv2
+import tensorflow as tf
 
 from django import forms 
 from django.shortcuts import render,redirect
 from .models import Post
 from .forms import TextForm
+from PIL import Image
 
 # class TextCreateView(CreateView):
 #     template_name = 'ingredients/post_form.html'
@@ -74,14 +76,23 @@ def image_result(request,pk):
     logging.error('Something unexpected and important happened.')
     logging.critical('OMG!!! A critical error happend and the code cannot run!')
     
-    img = Image.open(data.head_image)
-    img = np.array(img)
-    img = img.reshape(1, 128, 128, 3)
+    # img = Image.open(data.head_image)
+    # img = np.array(img)
+    # img = cv2.resize(img,dsize=(128,128),interpolation=cv2.INTER_LINEAR)
+    # img_batch = np.expand_dims(img, 0)
+    
+    img = np.array(Image.open(data.head_image).resize((128, 128)))
+    img_list = []
+    img_list.append(np.array(img))
+    x = np.asarray(img_list)
+    # pr_mask = model.predict(x).round()
+    
+    
     loaded_model = load_model("model_lb5_128_plus_vgg_8282.h5")
-    pred = loaded_model.predict(img)
+    pred = loaded_model.predict(x)
     pred = np.argmax(pred[0])
     
-    label_index = ['당근', '계란', '대파', '양파', '식빵']
+    label_index = ['당근', '계란', '대파', '양파', '깻잎']
     result = label_index[pred]
     
     data.result = result
@@ -89,7 +100,7 @@ def image_result(request,pk):
     data.save()
     return render(
         request,
-        'blog/result.html',
+        'ingredients/result.html',
         {
             'result':result,
         }
