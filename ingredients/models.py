@@ -18,3 +18,24 @@ class MnistImage(models.Model):
 
     def get_absolute_url(self):
         return f'/ingredients/image_result/{self.pk}/'
+    
+from django.core.validators import MinValueValidator, MaxValueValidator
+
+
+class RecipeList(models.Model):
+    rc_num = models.IntegerField(blank=True, null=True)
+    rc_name = models.CharField(max_length=100, blank=True, null=True)
+    rc_view = models.CharField(max_length=100, blank=True, null=True)
+    rc_rec = models.CharField(max_length=100, blank=True, null=True)
+    rc_scrap = models.CharField(max_length=100, blank=True, null=True)
+    rc_type = models.CharField(max_length=100, blank=True, null=True)
+    rc_sit = models.CharField(max_length=100, blank=True, null=True)
+    rc_sort = models.CharField(max_length=100, blank=True, null=True)
+    rc_nick = models.CharField(max_length=100, blank=True, null=True)
+    rc_info = models.CharField(max_length=100, blank=True, null=True)
+    rc_ing = models.CharField(max_length=200, blank=True, null=True)
+    rc_diff = models.CharField(max_length=100, blank=True, null=True)
+    rc_time = models.CharField(max_length=100, blank=True, null=True)
+    # Field renamed to remove unsuitable characters. This field type is a guess.
+    # best_seller = models.BooleanField(
+    #     db_column='best seller', blank=True, null=True)

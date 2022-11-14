@@ -7,4 +7,6 @@ urlpatterns = [
     path("upload_text/", views.upload_text, name='upload_text' ),
     path('create_image/',views.MnistImageCreate.as_view()),
     path('image_result/<int:pk>/',views.image_result),
+    # path('recipe_list/',views.RecipeListView.as_view()),
+    path('recipe_list/',views.recipe_list)
 ]

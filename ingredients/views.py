@@ -11,12 +11,13 @@ import pandas as pd
 import logging
 import cv2
 import tensorflow as tf
-
+from django.db import models
 from django import forms 
 from django.shortcuts import render,redirect
-from .models import Post
+from .models import Post, RecipeList
 from .forms import TextForm
 from PIL import Image
+
 
 # class TextCreateView(CreateView):
 #     template_name = 'ingredients/post_form.html'
@@ -165,4 +166,45 @@ def image_result(request,pk):
 from django.shortcuts import render
 from django.db import connection
 
+# def recipe_list(request):
+#     posts = Post.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
+#     Blog.objects.filter(pk__in=[1, 4, 7])
+#     return render(
+#         request,
+#         'ingredients/post_list.html',
+#         {
+#             'posts':posts,
+#         }
+#     )
 
+# def recipe_list(request):
+#     candidates = 10000recipe.objects.all()
+#     context = {'candidates':candidates}
+#         #context에 모든 어린이 정보를 저장
+#     return render(request, 'elections/index.html', context)
+#         #context안에 있는 어린이 정보를 index.html로 전달
+
+# class RecipeListView(ListView):
+#     model= RecipeList
+#     fields=['rc_num', 'rc_name','rc_diff','rc_time','rc_ing']
+    
+def recipe_list(request):
+    recipelists = RecipeList.objects.all()
+    # recipelists = RecipeList.objects.filter(rc_ing__in=['당근'])
+    # lists = ['당근','대파']
+
+    # for inglists in lists:
+    #     recipelists = RecipeList.objects.filter(rc_ing__in=inglists)
+    # rc_ing = ['당근','대파']
+    # for tag in rc_ing:
+    #     ids = list(RecipeList.objects.filter(rc_ing__contains=tag).values_list("rc_ing", flat=True))
+    #     recipelists = RecipeList.objects.filter(rc_ing__contains=ids)
+        # recipelists = RecipeList.objects.filter(rc_ing__in='당근') 
+
+    return render(
+        request,
+        'ingredients/recipe_list.html',
+        {
+            'recipelists':recipelists,
+        }
+    )
