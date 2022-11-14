@@ -1,0 +1,9 @@
+2022-11-14 22:46:45,584 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:46:45,584 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:46:55,635 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:46:55,635 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:47:41,477 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:47:41,477 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-14 22:48:00,346 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
+2022-11-14 23:21:25,653 - root - INFO - ================ delete_all
+2022-11-14 23:21:25,675 - root - INFO - deleted.....

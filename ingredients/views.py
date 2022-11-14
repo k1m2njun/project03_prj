@@ -17,15 +17,9 @@ from django.shortcuts import render,redirect
 from .models import Post, RecipeList
 from .forms import TextForm
 from PIL import Image
+from django.views.decorators.csrf import csrf_exempt
 
 
-# class TextCreateView(CreateView):
-#     template_name = 'ingredients/post_form.html'
-#     success_url = '/' #1
-#     form_class = TextForm #2
-#     def form_valid(self,form): # 모델을 통해 db 안에 저장, post detail로 redirect까지
-#         # current_user = self.request.user  # request 안에 유저 로그인 정보가 담겨져 서버에 전달
-#         return super(TextCreateView,self).form_valid(form) # db쪽에 저장되고 redirect
 
 # def StockListView(request):
 #     try:
@@ -49,22 +43,7 @@ from PIL import Image
 
 def post_list(request):
     posts = Post.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
-    # try:
-    #     cursor = connection.cursor()
-    #     query = '''INSERT INTO ingredients_post (ingredient)
-    #                 SELECT result
-    #                 FROM ingredients_mnistimage'''
-    #     result = cursor.execute(query)
-    #     stocks = cursor.fetchall()
 
-    #     connection.commit()
-    #     connection.close()
-
-    # except:
-    #     connection.rollback()
-    #     print("Failed Selecting in StockList")
-    
-    # context = {'stocks' : stocks}
 
     return render(
         request,
@@ -73,6 +52,59 @@ def post_list(request):
             'posts':posts,
         }
     )
+
+
+import logging
+
+# 로그 생성
+logger = logging.getLogger()
+
+# 로그의 출력 기준 설정
+logger.setLevel(logging.INFO)
+
+# log 출력 형식
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# log 출력
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(formatter)
+logger.addHandler(stream_handler)
+
+# log를 파일에 출력
+file_handler = logging.FileHandler('my.log')
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
+
+@csrf_exempt
+def delete_all(request):
+    logger.info('================ delete_all')
+    
+    if(request.method == 'POST'):
+        ids = request.POST["del_ids"]
+        ids = ids.split(',')
+        for idx in range(len(ids)):
+            id = ids[idx]
+            ingredient = Post.objects.get(id=id)
+            ingredient.delete()
+            
+            logger.info('deleted.....')
+        
+        return redirect('ingredients')
+    
+          
+def upload_text(request):
+    if(request.method == 'POST'):
+        form=TextForm(request.POST)
+        if form.is_valid():
+            ing = form.save(commit=False)
+            ing.save()
+            return redirect('ingredients')
+    else:
+        form=TextForm()
+    context={'form':form}
+    return render(
+            request,
+            'ingredients/upload_text.html',context)
 
 
 def upload_text(request):
