@@ -1,0 +1,55 @@
+{% extends 'blog/base.html' %}
+{% load socialaccount %}
+{% block head_title %}오늘뭐먹지{% endblock %}
+{% block main_area %}
+
+<form method="Post" enctype="multipart/form-data">{% csrf_token %}
+    <header class="bg-light py-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xl-5 mx-auto">
+                    <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                        <div class="card-img-left d-none d-md-flex"></div>
+                        <div class="card-body p-4 p-sm-5">
+                            <h5 class="card-title text-center mb-5 fw-light fs-5">회원가입</h5> <!--성,이름,id,email,password-->
+                            <form> 
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="username" class="form-control" id="floatingInputUsername" placeholder="username" required autofocus>
+                                    <label for="floatingInputUsername">이름</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                                    <label for="floatingInputEmail">이메일 주소</label>
+                                </div>
+                                <hr>
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password1" class="form-control" id="floatingPassword" placeholder="Password">
+                                    <label for="floatingPassword">비밀번호</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password2" class="form-control" id="floatingPasswordConfirm" placeholder="Confirm Password">
+                                    <label for="floatingPasswordConfirm">비밀번호 확인</label>
+                                </div>
+                                <div class="d-grid mb-2">
+                                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">등록</button>
+                                </div>
+                                <a class="d-block text-center mt-2 small" href="/">이미 계정이 있으세요? 로그인 하기</a>
+                                <hr class="my-4">
+                                <div class="d-grid mb-2">
+                                    <a role="button" class="btn btn-outline-dark btn-lg fw-bold" href="{% provider_login_url 'google' %}">
+                                        <i class="fa-brands fa-google"></i> 구글로 로그인</a>
+                                </div>
+                                <div class="d-grid">
+                                    <a role="button" class="btn btn-outline-dark btn-lg fw-bold" href="/accounts/signup/">
+                                        <i class="fa-regular fa-envelope"></i> 이메일주소로 로그인</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</form>
+
+{% endblock %}

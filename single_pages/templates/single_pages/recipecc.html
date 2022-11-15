@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load socialaccount %}
+
+{% block head_title %}레시피추천{% endblock %}
+
+{% block main_area %}
+<form method="Post" enctype="multipart/form-data">{% csrf_token %}
+    {% if user.is_authenticated %}
+
+    {% for p in recipe_list %}
+    <p>{{ p.title }}</p>
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+    {% endif %}
+
+
+
+
+{% endblock %}

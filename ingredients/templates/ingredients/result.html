@@ -1,5 +1,5 @@
-
-{%block main_area%}
+{% extends 'blog/base.html' %}
+{% block main_area %}
 {{result}}
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -8,5 +8,5 @@
 <a role="button" class="btn btn-info btn-sm" href="/ingredients/">
     <i class="fa-solid fa-file-pen"></i> Edit Post
 </a>
-{%endblock%}
+{% endblock %}
 

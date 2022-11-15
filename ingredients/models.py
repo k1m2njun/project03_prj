@@ -18,9 +18,6 @@ class MnistImage(models.Model):
 
     def get_absolute_url(self):
         return f'/ingredients/image_result/{self.pk}/'
-    
-from django.core.validators import MinValueValidator, MaxValueValidator
-
 
 class RecipeList(models.Model):
     rc_num = models.IntegerField(blank=True, null=True)

@@ -355,3 +355,360 @@ ValueError: The view ingredients.views.recommend didn't return an HttpResponse o
 2022-11-15 11:31:04,076 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\models.py changed, reloading.
 2022-11-15 11:31:56,325 - root - INFO - ================ recommend
 2022-11-15 11:31:56,333 - root - INFO - recommending.....
+2022-11-15 14:15:44,211 - django.request - ERROR - Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: blog_post
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\doit_django1\project03\blog\views.py", line 16, in get_context_data
+    context = super(PostList, self).get_context_data()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 75, in page
+    number = self.validate_number(number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: blog_post
+2022-11-15 14:15:56,931 - django.request - ERROR - Internal Server Error: /accounts/google/login/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\base\mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\base\provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\models.py", line 31, in get_current
+    app = self.get(sites__id=site.id, provider=provider)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+allauth.socialaccount.models.SocialApp.DoesNotExist: SocialApp matching query does not exist.
+2022-11-15 14:35:32,876 - django.request - ERROR - Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: blog_post
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\doit_django1\project03\blog\views.py", line 16, in get_context_data
+    context = super(PostList, self).get_context_data()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 75, in page
+    number = self.validate_number(number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: blog_post
+2022-11-15 14:35:55,638 - django.request - ERROR - Internal Server Error: /accounts/google/login/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 80, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\base\mixins.py", line 18, in dispatch
+    return self.login(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\oauth2\views.py", line 108, in login
+    app = provider.get_app(self.request)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\providers\base\provider.py", line 30, in get_app
+    return adapter.get_app(request, self.id)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\adapter.py", line 204, in get_app
+    app = SocialApp.objects.get_current(provider, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\allauth\socialaccount\models.py", line 31, in get_current
+    app = self.get(sites__id=site.id, provider=provider)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+allauth.socialaccount.models.SocialApp.DoesNotExist: SocialApp matching query does not exist.
+2022-11-15 14:37:42,677 - django.request - WARNING - Not Found: /blog/ingredients/
+2022-11-15 14:38:47,000 - django.request - ERROR - Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: blog_post
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\doit_django1\project03\blog\views.py", line 16, in get_context_data
+    context = super(PostList, self).get_context_data()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 75, in page
+    number = self.validate_number(number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: blog_post
+2022-11-15 14:41:55,863 - django.request - ERROR - Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: blog_post
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\doit_django1\project03\blog\views.py", line 16, in get_context_data
+    context = super(PostList, self).get_context_data()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 75, in page
+    number = self.validate_number(number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: blog_post
+2022-11-15 14:42:04,694 - django.request - ERROR - Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: blog_post
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\doit_django1\project03\blog\views.py", line 16, in get_context_data
+    context = super(PostList, self).get_context_data()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 75, in page
+    number = self.validate_number(number)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 53, in validate_number
+    if number > self.num_pages:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: blog_post

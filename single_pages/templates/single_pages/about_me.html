@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="{% static 'single_pages/css/about_me.css' %}" rel="stylesheet" media="screen">
+    <script src="https://kit.fontawesome.com/3d21bdf518.js" crossorigin="anonymous"></script>
+    {% include 'blog/navbar.html' %}
+</head>
+<body style="padding-top: 50px;">
+    <section class="bg-light margin-for-footer">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>안녕하소.</h1>
+                    
+                    <br/>
+                    <p class="lead">
+                        음악과 수영 좋아한대요 <br/>
+                        하하하하하
+                    </p>
+                    <ul>
+                        <li>WORK EXPERIENCE</li>
+                    
+                        <ul>
+                            <li>크고 좋ㅇ른회사</li>
+                            <li>뭐뭐뭐뭐뭠</li>
+                        </ul>
+                        <li>EDUCATION</li>
+                        <ul>
+                            <li>공박, 장고공학, 아하하</li>
+                            <li>공박, 장고공학, 아하하</li>
+                            <li>공박, 장고공학, 아하하</li>
+                        </ul>
+                        <li>공박, 장고공학, 아하하</li>
+                        <ul>
+                            <li>DoItDjango, 이지픝ㅊㅇ히ㅏㅣㄹㄴ</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{% static 'single_pages/images/my_back.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>PORTFOLIO</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#pycon2017">
+                        <img class="card-img-top" src="{% static 'single_pages/images/abc부트캠프_프로필사진.png' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">파이썬으로 통계업무</h5>
+                            <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#inflearn_django2">
+                        <img class="card-img-top" src="{% static 'single_pages/images/123.png' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">파이썬으로 통계업무</h5>
+                            <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#automation">
+                        <img class="card-img-top" src="{% static 'single_pages/images/오오오.png' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">파이썬으로 통계업무</h5>
+                            <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- modal -->
+<div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">...</div>
+</div>
+<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearn_django2ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">...</div>
+</div>
+<div class="modal fade" id="automation" tabindex="-1" role="dialog" aria-labelledby="automationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">...</div>
+</div>
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+</html>

@@ -1,0 +1,177 @@
+{% extends 'blog/base.html' %}
+{% load socialaccount %}
+
+{% block head_title %}
+오늘뭐먹지
+{% endblock %}
+
+{% block main_area %}
+
+<style>
+  @font-face {
+      font-family: 'HSGyeoulNoonkott20';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+  h1.nav1 {
+      font-family: 'HSGyeoulNoonkott20';
+      font-size: 80px;
+  }   
+  </style>
+
+<form method="Post" enctype="multipart/form-data">{% csrf_token %}
+{% if user.is_authenticated %}
+<header class="bg-light py-1">
+  <!-- 배경색 변경 -->
+  <div class="container px-5">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 gx-5">
+      <div class="col-lg-5 col-xl-5 col-xxl-5">
+        <div class="my-5 text-start">
+          <h1 class="display-5 fw-bolder text-black mb-2">로그인 완료!</h1>
+          <p class="fw-normal fs-4">로그인 됨 걱정마셈</p>
+          <p class="lead fw-normal text-black-50 mb-4 fs-6">멀리 그러나 남은 무성할 아스라히 걱정도 새겨지는 소녀들의 애기 있습니다.
+            나의 묻힌 어머님, 이름과, 언덕 아이들의 노새, 어머니, 계집애들의 봅니다.
+            언덕 어머니, 다 딴은 까닭이요, 시와 듯합니다. 시인의 잠, 멀리 마디씩 소녀들의 다하지 봅니다.
+            아름다운 잔디가 잠, 까닭입니다. 마디씩 가난한 계절이 까닭이요, 이국 둘 있습니다.</p>
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+            <a class="shadow-sm btn btn-outline-secondary" href="#">Coming soon</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2"></div>
+      {% else %}
+        
+          <!-- 배경색 변경 -->
+          <div class="container px-5">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 gx-5 align-items-center">
+              <div class="col-lg-5 col-xl-5 col-xxl-5">
+                <div class="my-5 text-start">
+                  <h1 class="display-5 fw-bolder text-black mb-4 nav1">오늘뭐먹지</h1>
+                  <p class="fw-normal fs-4">오늘 뭐 먹을지 고민이라면,</p>
+                  <p class="lead fw-normal text-black-50 mb-4 fs-6">멀리 그러나 남은 무성할 아스라히 걱정도 새겨지는 소녀들의 애기 있습니다.
+                    나의 묻힌 어머님, 이름과, 언덕 아이들의 노새, 어머니, 계집애들의 봅니다.
+                    언덕 어머니, 다 딴은 까닭이요, 시와 듯합니다. 시인의 잠, 멀리 마디씩 소녀들의 다하지 봅니다.
+                    아름다운 잔디가 잠, 까닭입니다. 마디씩 가난한 계절이 까닭이요, 이국 둘 있습니다.</p>
+                  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                    <a class="shadow-sm btn btn-outline-secondary" href="#">Coming soon</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2"></div>
+                <!--로그인창-->
+                <!-- <link href="static/single_pages/css/signin.css" rel="stylesheet">
+
+                    <form class="col-xl-3 col-xxl-3 text-center">
+                      <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+                  
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                  
+                      <div class="checkbox mb-3">
+                        <label>
+                          <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                      </div>
+                      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                      <p class="mt-5 mb-3 text-muted">&copy; 2017 - 2022</p>
+                    </form> -->
+                
+                  <div class="col-xl-5 col-xxl-4 text-end">
+                    <div class="card border-0 shadow rounded-1 my-3">
+                      <div class="card-body p-3 p-sm-10">
+                        <h5 class="card-title text-center mb-3 fw-light fs-4">로그인</h5>
+                        <form>
+                          <div class="form-floating mb-1">
+                            <input type="email" name="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com">
+                            <label for="floatingInputEmail">이메일 주소</label>
+                          </div>
+                          <div class="form-floating mb-1">
+                            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">비밀번호</label>
+                          </div>
+                          <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                            <label class="form-check-label" for="rememberPasswordCheck">비밀번호 기억하기</label>
+                          </div>
+                          <div class="d-grid">
+                            <button class="btn btn-primary btn-login fw-bold" type="submit">로그인</button>
+                          </div>
+                          <hr class="my-2">
+                          <div class="d-grid">
+                            <a role="button" class="btn btn-outline-dark btn-sm fw-bold mb-1"
+                              href="{% provider_login_url 'google' %}">
+                              <i class="fa-brands fa-google"></i> 구글로 로그인</a>
+                          </div>
+                          <div class="d-grid">
+                            <a role="button" class="btn btn-outline-dark btn-sm fw-bold" href="/accounts/signup/">
+                              <i class="fa-regular fa-envelope"></i> 이메일주소로 로그인</a>
+                          </div>
+                          <div class="d-grid">
+                            <a class="btn btn-login fw-bold" type="button" href="/signup/">회원가입</a>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  {% endif %}
+              </div>
+            </div>
+          </header>
+</form>
+      <br>
+      <!-- 하단 카드 -->
+      <div class="album py-1 bg-light ">
+        <div class="container-fluid">
+          <div class="row row-cols-4 row-cols-sm-4 row-cols-md-4 g-0">
+            <div class="col">
+              <div class="card shadow">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="300"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#55595c" />
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="300"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#55595c" />
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="300"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#55595c" />
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="300"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: صورة مصغرة"
+                  preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <rect width="100%" height="100%" fill="#55595c" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}
