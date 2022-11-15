@@ -80,14 +80,9 @@ def recommend(request):
         for idx in range(len(ids)):
             id = ids[idx]
             ingredient = Ingredients.objects.get(id=id)
-            mningredient = MnistImage.objects.get(id=id)
             keyword = ingredient.ingredient
-            mnkeyword = mningredient.result
-            
             recipe_list = RecipeList.objects.all().order_by('-rc_rec')
             recipe_list = recipe_list.filter(rc_ing__icontains=keyword)
-            mnrecipe_list = recipe_list.filter(rc_ing__icontains=mnkeyword)
-
             # ingredient.objects.values 
             
             logger.info('recommending.....')
@@ -96,9 +91,7 @@ def recommend(request):
             request,
             'ingredients/recipe_list.html',
             {'recipe_list':recipe_list,
-             'mnrecipe_list':mnrecipe_list,
              'keywords': keyword,
-             'mnkeywords': mnkeyword,
              }
             )
     
@@ -116,6 +109,18 @@ def upload_text(request):
     return render(
             request,
             'ingredients/upload_text.html',context)
+
+# class UploadText(CreateView):
+#     model=Ingredients
+    
+#     def form_valid(self, form):
+#         current_user = self.request.user
+#         if current_user.is_authenticated:
+#             form.instance.author = current_user
+#             response = super(UploadText, self).form_valid(form)
+#             return response
+#         else:
+#             return redirect("ingredients")
 
 class MnistImageCreate(CreateView):
     model= MnistImage

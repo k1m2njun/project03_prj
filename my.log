@@ -2139,3 +2139,163 @@ Traceback (most recent call last):
 django.db.utils.IntegrityError: NOT NULL constraint failed: ingredients_ingredients.author_id
 2022-11-15 23:42:26,007 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
 2022-11-15 23:42:38,427 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-15 23:43:47,392 - root - INFO - Everything is normal. Relax!
+2022-11-15 23:43:47,393 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 23:43:47,393 - root - ERROR - Something unexpected and important happened.
+2022-11-15 23:43:47,394 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 23:44:04,525 - root - INFO - Everything is normal. Relax!
+2022-11-15 23:44:04,525 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 23:44:04,525 - root - ERROR - Something unexpected and important happened.
+2022-11-15 23:44:04,526 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 23:45:29,202 - root - INFO - ================ delete_all
+2022-11-15 23:45:29,228 - root - INFO - deleted.....
+2022-11-15 23:45:43,554 - django.request - ERROR - Internal Server Error: /ingredients/upload_text/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: ingredients_ingredients.author_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 111, in upload_text
+    ing.save()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: ingredients_ingredients.author_id
+2022-11-16 00:37:31,822 - django.request - ERROR - Internal Server Error: /ingredients/upload_text/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: ingredients_ingredients.author_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 111, in upload_text
+    ing.save()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: ingredients_ingredients.author_id
+2022-11-16 00:37:39,719 - root - INFO - Everything is normal. Relax!
+2022-11-16 00:37:39,720 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 00:37:39,720 - root - ERROR - Something unexpected and important happened.
+2022-11-16 00:37:39,720 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 00:37:40,715 - root - INFO - Everything is normal. Relax!
+2022-11-16 00:37:40,716 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 00:37:40,716 - root - ERROR - Something unexpected and important happened.
+2022-11-16 00:37:40,717 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 00:37:46,135 - root - INFO - ================ recommend
+2022-11-16 00:37:46,168 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 83, in recommend
+    mningredient = MnistImage.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+ingredients.models.MnistImage.DoesNotExist: MnistImage matching query does not exist.
+2022-11-16 00:44:27,733 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:44:35,796 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:44:41,737 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:45:27,660 - root - INFO - ================ recommend
+2022-11-16 00:45:27,665 - root - INFO - recommending.....
+2022-11-16 00:45:30,776 - root - INFO - ================ recommend
+2022-11-16 00:45:30,778 - root - INFO - recommending.....
+2022-11-16 00:45:33,989 - root - INFO - ================ recommend
+2022-11-16 00:45:33,995 - root - INFO - recommending.....
+2022-11-16 00:45:33,997 - root - INFO - recommending.....
+2022-11-16 00:47:23,042 - root - INFO - ================ recommend
+2022-11-16 00:47:23,047 - root - INFO - recommending.....
+2022-11-16 00:47:23,048 - root - INFO - recommending.....
+2022-11-16 00:52:54,397 - root - INFO - ================ recommend
+2022-11-16 00:52:54,403 - root - INFO - recommending.....
+2022-11-16 00:53:42,406 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:53:51,502 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:54:04,785 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:54:11,030 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:54:36,710 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:55:06,442 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:55:15,720 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:55:33,822 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:55:39,100 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 00:56:25,036 - root - INFO - ================ recommend
+2022-11-16 00:56:25,041 - root - INFO - recommending.....
+2022-11-16 00:56:35,187 - root - INFO - Everything is normal. Relax!
+2022-11-16 00:56:35,188 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 00:56:35,188 - root - ERROR - Something unexpected and important happened.
+2022-11-16 00:56:35,189 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 00:56:43,905 - root - INFO - ================ delete_all
+2022-11-16 00:56:43,912 - root - INFO - deleted.....
+2022-11-16 00:56:47,141 - root - INFO - ================ delete_all
+2022-11-16 00:56:47,158 - root - INFO - deleted.....
