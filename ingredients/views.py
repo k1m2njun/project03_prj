@@ -1,7 +1,7 @@
 from django import forms 
 from django.db import models, connection
 from django.shortcuts import render,redirect
-from django.views.generic import ListView,DetailView,CreateView,UpdateView
+from django.views.generic import CreateView
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.core.exceptions import PermissionDenied
@@ -82,7 +82,8 @@ def recommend(request):
         
     return render(
             request,
-            'ingredients/recipe_list.html',{'recipe_list':recipe_list, 'keywords': keyword})
+            'ingredients/recipe_list.html',
+            {'recipe_list':recipe_list, 'keywords': keyword})
     
           
 def upload_text(request):
@@ -117,6 +118,15 @@ def upload_text(request):
 class MnistImageCreate(CreateView):
     model= MnistImage
     fields=['head_image']
+    
+    def form_valid(self, form):
+        current_user = self.request.user
+        if current_user.is_authenticated:
+            form.instance.author = current_user
+            response = super(MnistImageCreate, self).form_valid(form)
+            return response
+        else:
+            return redirect("ingredients")
 
 def image_result(request,pk):
     data = MnistImage.objects.get(pk=pk)

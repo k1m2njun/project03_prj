@@ -39,10 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.sites",
     
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "allauth.socialaccount.providers.google",
     
     "blog",
     "ingredients",
@@ -50,6 +46,12 @@ INSTALLED_APPS = [
     
     'crispy_forms',
     "crispy_bootstrap5",
+    
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
+    
 ]
 
 MIDDLEWARE = [

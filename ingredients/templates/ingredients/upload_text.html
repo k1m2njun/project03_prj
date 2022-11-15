@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
-{% block head_title %}{{ post.title }} - 재료입력{% endblock %}
-{%load static%}
+{% block head_title %}텍스트로 입력하기{% endblock %}
+{% load static %}
 {% block main_area %}
 <div class="container">
 
@@ -13,12 +13,12 @@
     {% if form.errors %}
     <div class="alert alert-danger" role="alert">
         {% for field in form %}
-        {% if field.errors %}
-        <div>
-            <strong>{{ field.label }}</strong>
-            {{ field.errors }}
-        </div>
-        {% endif %}
+            {% if field.errors %}
+            <div>
+                <strong>{{ field.label }}</strong>
+                {{ field.errors }}
+            </div>
+            {% endif %}
         {% endfor %}
     </div>
     {% endif %}

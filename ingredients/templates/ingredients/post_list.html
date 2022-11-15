@@ -1,216 +1,205 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
-
-{% block head_title %}{{ post.title }} - Blog{% endblock %}
+{% block head_title %}나의 냉장고{% endblock %}
 {% block main_area %}
 
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 <script>
-  function selectAll(selectAll)  {
-    const checkboxes 
-        = document.querySelectorAll('input[type="checkbox"]');
-    
+  function selectAll(selectAll) {
+    const checkboxes
+      = document.querySelectorAll('input[type="checkbox"]');
+
     checkboxes.forEach((checkbox) => {
       checkbox.checked = selectAll.checked
     })
   }
 
-  function selectDelete()  {
-  // 선택된 목록 가져오기
-  const query = 'input[type="checkbox"]:checked';
-  const selectedEls = 
+  function selectDelete() {
+    // 선택된 목록 가져오기
+    const query = 'input[type="checkbox"]:checked';
+    const selectedEls =
       document.querySelectorAll(query);
-  
-  // 선택된 목록에서 value 찾기
-  var result = [];
-  selectedEls.forEach((el) => {
-    if (el.value != ''){
-      result.push(el.value);
+
+      
+      // 선택된 목록에서 value 찾기
+      var result = [];
+      selectedEls.forEach((el) => {
+        if (el.value != '') {
+          result.push(el.value);
+        }
+      });
+
+    if(result.length > 0 ){
+
+      var form = document.createElement('form');
+      form.setAttribute('method', 'post');
+      form.setAttribute('action', '/ingredients/delete_all/');
+
+      var results = document.createElement('input');
+      results.setAttribute('type', 'hidden');
+      results.setAttribute('name', 'del_ids');
+      results.setAttribute('value', result);
+      form.appendChild(results);
+
+      document.body.appendChild(form);
+      form.submit();
+
+    }else{
+      $('#exampleModal').modal('hide');checkModal
+      $('#checkModal').modal('show');
     }
-  });
 
-  var form = document.createElement('form');
-  form.setAttribute('method','post');
-  form.setAttribute('action', '/ingredients/delete_all/');
+  }
 
-  var results = document.createElement('input');
-  results.setAttribute('type', 'hidden');
-  results.setAttribute('name', 'del_ids');
-  results.setAttribute('value', result);
-  form.appendChild(results);
-
-  document.body.appendChild(form);
-  form.submit();
-
-}
-
-function recommendation()  {
-  // 선택된 목록 가져오기
-  const query = 'input[type="checkbox"]:checked';
-  const selectedEls = 
+  function recommendation() {
+    // 선택된 목록 가져오기
+    const query = 'input[type="checkbox"]:checked';
+    const selectedEls =
       document.querySelectorAll(query);
-  
-  // 선택된 목록에서 value 찾기
-  var result = [];
-  selectedEls.forEach((el) => {
-    if (el.value != ''){
-      result.push(el.value);
-    }
-  });
 
-  var form = document.createElement('form');
-  form.setAttribute('method','post');
-  form.setAttribute('action', '/ingredients/recipe_list/');
+    // 선택된 목록에서 value 찾기
+    var result = [];
+    selectedEls.forEach((el) => {
+      if (el.value != '') {
+        result.push(el.value);
+      }
+    });
 
-  var results = document.createElement('input');
-  results.setAttribute('type', 'hidden');
-  results.setAttribute('name', 'rec_ids');
-  results.setAttribute('value', result);
-  form.appendChild(results);
+    var form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', '/ingredients/recipe_list/');
 
-  document.body.appendChild(form);
-  form.submit();
+    var results = document.createElement('input');
+    results.setAttribute('type', 'hidden');
+    results.setAttribute('name', 'rec_ids');
+    results.setAttribute('value', result);
+    form.appendChild(results);
 
-}
+    document.body.appendChild(form);
+    form.submit();
 
+  }
 </script>
 
 <!-- <body style="padding-top: 80px;"> -->
-  <!-- 80 픽셀 여유를 두고 page container 아래를 찍어줌(메뉴에 가려지지 않게)-->
+<!-- 80 픽셀 여유를 두고 page container 아래를 찍어줌(메뉴에 가려지지 않게)-->
 
-  <!-- 본문내용 start -->
-  <!-- Page content-->
-  <div class="container">
-    <div class="row">
-      <!-- Blog entries-->
-      <div class="col-lg-8">
-        <!-- Featured blog post -->
-        <h1>나의 냉장고</h1>
-        </br>
-        <table class="table table-hover">
-          <thead id="thead">
-            <tr>
-              <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick='selectAll(this)'></th>
-              <th>번호</th>
-              <th>재료명</th>
-              <th>유통기한</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="tbody">
-            {% for p in posts %}
-            <tr>
-              <td>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="{{ p.id }}" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
-                  </label>
-                </div>
-              </td>
-              <td>{{forloop.counter}}</td>
-              <td>{{ p.ingredient }}</td>
-              <td>{{p.expiration_date|date:'Y-m-d'}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-
-
-        <!-- Pagination-->
-        <nav aria-label="Pagination">
-          <hr class="my-0" />
-          <ul class="pagination justify-content-center my-4">
-            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-            </li>
-            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <!--Side widgets-->
-      <div class="col-lg-4">
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            재료입력
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="create_image/">이미지로 입력</a></li>
-            <li><a class="dropdown-item" href="upload_text/">텍스트로 입력</a></li>
-          </ul>
-        </div>
-        <!-- 새로 버튼 만든거 -->
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">삭제</button>
-            <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header"> 
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">삭제</h1>
-                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      삭제하시겠습니까?
-                    </div>
-                    <div class="modal-footer">
-                      <ul class="button">
-                        <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="#">아니요</a>
-                        <a type="button" class="btn btn-primary" onclick="selectDelete();">네</a> 
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+<!-- 본문내용 start -->
+<!-- Page content-->
+<div class="container">
+  <div class="row">
+    <!-- Blog entries-->
+    <div class="col-lg-8">
+      <!-- Featured blog post -->
+      <h1>나의 냉장고</h1>
+      </br>
+      <table class="table table-hover">
+        <thead id="thead">
+          <tr>
+            <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                onclick='selectAll(this)'></th>
+            <th>번호</th>
+            <th>재료명</th>
+            <th>유통기한</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          {% for p in posts %}
+          <tr>
+            {% if user.is_authenticated and user == p.author %}
+            <td>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="{{ p.id }}" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault"></label>
               </div>
-              <a type="button" class="btn btn-outline-dark" onclick="recommendation();">레시피 추천</a>
-
-        <!-- Side widget-->
-        <div class="card mb-4">
-          <div class="card-header">Side Widget</div>
-          <div class="card-body">You can put anything you want inside of these side widgets. They are easy to
-            use, and feature the Bootstrap 5 card component!</div>
-        </div>
-      </div>
+            </td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.ingredient }}</td>
+            <td>{{ p.expiration_date|date:'Y-m-d' }}</td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <!-- Pagination-->
+      <nav aria-label="Pagination">
+        <hr class="my-0" />
+        <ul class="pagination justify-content-center my-4">
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+          <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+          <li class="page-item"><a class="page-link" href="#!">2</a></li>
+          <li class="page-item"><a class="page-link" href="#!">3</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+          <li class="page-item"><a class="page-link" href="#!">15</a></li>
+          <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-
-
-  <!-- Modal start-->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-md-6 col-sm-12 d-grid gap-2">
-              <button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-brands fa-google"></i> Login in
-                with Google</button>
-              <button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-user-plus"></i> Login in
-                with username</button>
+    <!--Side widgets-->
+    <div class="col-lg-4">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          재료 입력
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="create_image/">이미지로 입력</a></li>
+          <li><a class="dropdown-item" href="upload_text/">텍스트로 입력</a></li>
+        </ul>
+      </div>
+      <!-- 새로 버튼 만든거 -->
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">삭제</button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">삭제</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="col-md-6 col-sm-12 d-grid gap-2">
-              <button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-n"></i> Login in with
-                Naver</button>
-              <button type="button" class="btn btn-outline-dark btn-sm"><i class="fa-regular fa-envelope"></i> Sign up
-                with E-mail</button>
+            <div class="modal-body">
+              삭제하시겠습니까?
+            </div>
+            <div class="modal-footer">
+              <ul class="button">
+                <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="#">아니요</a>
+                <a type="button" class="btn btn-primary" onclick="selectDelete();">네</a>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+      <div class="modal fade" id="checkModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">알림</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              삭제할 재료를 먼저 선택하세요
+            </div>
+            <div class="modal-footer">
+              <ul class="button">
+                <a type="button" class="btn btn-secondary" data-bs-dismiss="modal" href="#">확인</a>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <a type="button" class="btn btn-outline-dark" onclick="recommendation();">레시피 추천</a>
+
+      <!-- Side widget-->
+      <div class="card mb-4">
+        <div class="card-header">Side Widget</div>
+        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to
+          use, and feature the Bootstrap 5 card component!</div>
       </div>
     </div>
   </div>
-  <!-- Modal end -->
-
-  <!-- 본문내용 end -->
-
-
-  {% endblock %}
+</div>
+<!-- 본문내용 end -->
+{% endblock %}

@@ -808,3 +808,590 @@ Traceback (most recent call last):
     raise e.__class__(
 ValueError: Field 'id' expected a number but got ''.
 2022-11-15 14:48:40,860 - django.request - WARNING - Not Found: /ingredients/about_me.html
+2022-11-15 15:00:00,501 - root - INFO - ================ recommend
+2022-11-15 15:00:00,549 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 73, in recommend
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 15:13:23,980 - root - INFO - ================ recommend
+2022-11-15 15:13:24,033 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 73, in recommend
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 15:14:58,265 - root - INFO - ================ recommend
+2022-11-15 15:14:58,314 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 73, in recommend
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 15:15:08,090 - root - INFO - Everything is normal. Relax!
+2022-11-15 15:15:08,091 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 15:15:08,092 - root - ERROR - Something unexpected and important happened.
+2022-11-15 15:15:08,092 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 15:15:08,962 - django.request - ERROR - Internal Server Error: /ingredients/image_result/3/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 137, in image_result
+    pred = loaded_model.predict(x)
+  File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\user\AppData\Local\Temp\__autograph_generated_filej236dtbb.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2041, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2027, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2015, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 1983, in predict_step
+        return self(x, training=False)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 128, 128, 3), found shape=(None, 128, 128, 4)
+
+2022-11-15 15:15:58,598 - root - INFO - Everything is normal. Relax!
+2022-11-15 15:15:58,599 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 15:15:58,599 - root - ERROR - Something unexpected and important happened.
+2022-11-15 15:15:58,600 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 15:15:59,077 - django.request - ERROR - Internal Server Error: /ingredients/image_result/4/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 137, in image_result
+    pred = loaded_model.predict(x)
+  File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\user\AppData\Local\Temp\__autograph_generated_filej236dtbb.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2041, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2027, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2015, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 1983, in predict_step
+        return self(x, training=False)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 128, 128, 3), found shape=(None, 128, 128, 4)
+
+2022-11-15 15:27:14,244 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 15:27:28,532 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\views.py changed, reloading.
+2022-11-15 15:27:37,913 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\views.py changed, reloading.
+2022-11-15 15:36:40,084 - root - INFO - Everything is normal. Relax!
+2022-11-15 15:36:40,085 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 15:36:40,085 - root - ERROR - Something unexpected and important happened.
+2022-11-15 15:36:40,085 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 15:36:40,685 - django.request - ERROR - Internal Server Error: /ingredients/image_result/5/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 137, in image_result
+    pred = loaded_model.predict(x)
+  File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\user\AppData\Local\Temp\__autograph_generated_fileo7j7wbt5.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2041, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2027, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 2015, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\training.py", line 1983, in predict_step
+        return self(x, training=False)
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\user\anaconda3\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 128, 128, 3), found shape=(None, 128, 128, 4)
+
+2022-11-15 15:43:19,069 - root - INFO - Everything is normal. Relax!
+2022-11-15 15:43:19,069 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 15:43:19,069 - root - ERROR - Something unexpected and important happened.
+2022-11-15 15:43:19,070 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 15:44:30,049 - root - INFO - Everything is normal. Relax!
+2022-11-15 15:44:30,051 - root - WARNING - Something unexpected but not important happend.
+2022-11-15 15:44:30,051 - root - ERROR - Something unexpected and important happened.
+2022-11-15 15:44:30,052 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-15 15:47:25,253 - root - INFO - ================ delete_all
+2022-11-15 15:47:25,278 - root - INFO - deleted.....
+2022-11-15 15:52:57,377 - django.request - ERROR - Internal Server Error: /about_me/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\doit_django1\project03\single_pages\views.py", line 15, in about_me
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 92: 'endblock'. Did you forget to register or load this tag?
+2022-11-15 15:56:48,275 - root - INFO - ================ delete_all
+2022-11-15 15:56:48,325 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 57, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 15:58:28,449 - root - INFO - ================ delete_all
+2022-11-15 15:58:28,484 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 57, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 16:01:53,439 - root - INFO - ================ delete_all
+2022-11-15 16:01:53,507 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 57, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 16:02:27,931 - root - INFO - ================ delete_all
+2022-11-15 16:02:27,983 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 57, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 16:15:54,914 - root - INFO - ================ recommend
+2022-11-15 16:15:54,957 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 73, in recommend
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 16:32:40,799 - root - INFO - ================ delete_all
+2022-11-15 16:32:40,808 - root - INFO - deleted.....
+2022-11-15 16:33:17,343 - root - INFO - ================ recommend
+2022-11-15 16:33:17,393 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\doit_django1\project03\ingredients\views.py", line 73, in recommend
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 16:33:26,618 - root - INFO - ================ recommend
+2022-11-15 16:33:26,621 - root - INFO - recommending.....
+2022-11-15 16:52:41,961 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 16:52:52,213 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 16:53:14,790 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 16:55:07,616 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 16:55:15,002 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 16:56:22,972 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\views.py changed, reloading.
+2022-11-15 16:59:09,308 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:01:55,369 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:02:12,390 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:02:37,164 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:07:19,863 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\views.py changed, reloading.
+2022-11-15 17:08:57,519 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:13:42,885 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:13:48,768 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:19:37,844 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 17:24:48,227 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 17:24:48,332 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\models.py changed, reloading.
+2022-11-15 17:28:12,051 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\ingredients\forms.py changed, reloading.
+2022-11-15 17:32:00,711 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
+2022-11-15 17:32:06,771 - django.utils.autoreload - INFO - C:\gittest\doit_django1\project03\project03_prj\settings.py changed, reloading.
