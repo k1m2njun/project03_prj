@@ -9,6 +9,9 @@ class Ingredients(models.Model):
     
     def __str__(self):
         return f'[{self.pk}] {self.ingredient}'
+    
+    def get_absolute_url(self):
+        return f'/ingredients/'
 
 class MnistImage(models.Model):
     head_image = models.ImageField(upload_to='ingredients/images/%Y/%m/%d/')

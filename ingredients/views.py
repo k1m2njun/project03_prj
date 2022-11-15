@@ -96,31 +96,32 @@ def recommend(request):
             )
     
           
-def upload_text(request):
-    if(request.method == 'POST'):
-        form=TextForm(request.POST)
-        if form.is_valid():
-            ing = form.save(commit=False)
-            ing.save()
-            return redirect('ingredients')
-    else:
-        form=TextForm()
-    context={'form':form}
-    return render(
-            request,
-            'ingredients/upload_text.html',context)
+# def upload_text(request):
+#     if(request.method == 'POST'):
+#         form=TextForm(request.POST)
+#         if form.is_valid():
+#             ing = form.save(commit=False)
+#             ing.save()
+#             return redirect('ingredients')
+#     else:
+#         form=TextForm()
+#     context={'form':form}
+#     return render(
+#             request,
+#             'ingredients/upload_text.html',context)
 
-# class UploadText(CreateView):
-#     model=Ingredients
+class UploadText(CreateView):
+    model=Ingredients
+    fields=['ingredient','expiration_date']
     
-#     def form_valid(self, form):
-#         current_user = self.request.user
-#         if current_user.is_authenticated:
-#             form.instance.author = current_user
-#             response = super(UploadText, self).form_valid(form)
-#             return response
-#         else:
-#             return redirect("ingredients")
+    def form_valid(self, form):
+        current_user = self.request.user
+        if current_user.is_authenticated:
+            form.instance.author = current_user
+            response = super(UploadText, self).form_valid(form)
+            return response
+        else:
+            return redirect("ingredients")
 
 class MnistImageCreate(CreateView):
     model= MnistImage

@@ -2299,3 +2299,65 @@ ingredients.models.MnistImage.DoesNotExist: MnistImage matching query does not e
 2022-11-16 00:56:43,912 - root - INFO - deleted.....
 2022-11-16 00:56:47,141 - root - INFO - ================ delete_all
 2022-11-16 00:56:47,158 - root - INFO - deleted.....
+2022-11-16 01:01:18,944 - root - INFO - Everything is normal. Relax!
+2022-11-16 01:01:18,945 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 01:01:18,945 - root - ERROR - Something unexpected and important happened.
+2022-11-16 01:01:18,945 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 01:04:34,618 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 01:05:15,805 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-16 01:06:28,850 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:06:39,652 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:06:44,708 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:06:52,637 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:07:01,604 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:07:06,635 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:07:12,195 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:07:17,398 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:07:22,356 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-16 01:08:27,180 - django.request - ERROR - Internal Server Error: /ingredients/upload_text/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: ingredients/ingredients_form.html
+2022-11-16 01:09:44,540 - django.request - ERROR - Internal Server Error: /ingredients/upload_text/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 125, in get_success_url
+    url = self.object.get_absolute_url()
+AttributeError: 'Ingredients' object has no attribute 'get_absolute_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 121, in form_valid
+    response = super(UploadText, self).form_valid(form)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 136, in form_valid
+    return super().form_valid(form)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 65, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\edit.py", line 127, in get_success_url
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: No URL to redirect to.  Either provide a url or define a get_absolute_url method on the Model.
+2022-11-16 01:12:05,169 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
+2022-11-16 01:12:10,712 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
