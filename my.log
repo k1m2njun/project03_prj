@@ -7,3 +7,351 @@
 2022-11-14 22:48:00,346 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
 2022-11-14 23:21:25,653 - root - INFO - ================ delete_all
 2022-11-14 23:21:25,675 - root - INFO - deleted.....
+2022-11-15 09:52:05,171 - django.request - WARNING - Not Found: /
+2022-11-15 09:57:01,894 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 09:57:26,292 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 09:57:47,840 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 09:58:04,616 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 09:59:14,362 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:04:50,749 - root - INFO - ================ delete_all
+2022-11-15 10:04:51,306 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 87, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1396, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1415, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1350, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1196, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 10:05:15,985 - root - INFO - ================ delete_all
+2022-11-15 10:05:16,075 - django.request - ERROR - Internal Server Error: /ingredients/delete_all/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 87, in delete_all
+    ingredient = Post.objects.get(id=id)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1396, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1415, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1350, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1196, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\lookups.py", line 77, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2022-11-15 10:08:04,992 - root - INFO - ================ delete_all
+2022-11-15 10:08:05,041 - root - INFO - deleted.....
+2022-11-15 10:08:05,046 - root - INFO - deleted.....
+2022-11-15 10:10:24,676 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:11:00,705 - root - INFO - ================ delete_all
+2022-11-15 10:11:00,757 - root - INFO - deleted.....
+2022-11-15 10:11:29,858 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
+2022-11-15 10:12:32,209 - django.request - WARNING - Not Found: /
+2022-11-15 10:12:39,778 - root - INFO - ================ delete_all
+2022-11-15 10:12:39,998 - root - INFO - deleted.....
+2022-11-15 10:14:31,770 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
+2022-11-15 10:14:42,038 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
+2022-11-15 10:14:49,201 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\urls.py changed, reloading.
+2022-11-15 10:15:00,246 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:15:20,288 - root - INFO - ================ delete_all
+2022-11-15 10:15:20,304 - root - INFO - deleted.....
+2022-11-15 10:16:44,340 - root - INFO - ================ recommend
+2022-11-15 10:16:44,604 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.rc_ing
+AttributeError: 'Post' object has no attribute 'rc_ing'
+2022-11-15 10:17:15,085 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:17:40,237 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:17:54,352 - root - INFO - ================ recommend
+2022-11-15 10:17:54,360 - root - INFO - recommending.....
+2022-11-15 10:17:54,376 - root - INFO - ================ recommend
+2022-11-15 10:17:54,902 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view ingredients.views.recommend didn't return an HttpResponse object. It returned None instead.
+2022-11-15 10:21:06,030 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:22:20,757 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:23:49,991 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:25:57,706 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:26:59,249 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:27:06,857 - root - INFO - ================ recommend
+2022-11-15 10:27:07,133 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view ingredients.views.recommend didn't return an HttpResponse object. It returned None instead.
+2022-11-15 10:27:09,618 - root - INFO - ================ recommend
+2022-11-15 10:27:09,647 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view ingredients.views.recommend didn't return an HttpResponse object. It returned None instead.
+2022-11-15 10:27:27,018 - django.request - WARNING - Not Found: /
+2022-11-15 10:27:33,684 - root - INFO - ================ recommend
+2022-11-15 10:27:34,447 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:30:00,819 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:30:15,282 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:30:33,622 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:30:42,738 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:30:56,294 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:31:09,508 - root - INFO - ================ recommend
+2022-11-15 10:31:09,759 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient = get_object_or_404(RecipeList,id=id).objects.values('rc_ing')
+NameError: name 'get_object_or_404' is not defined
+2022-11-15 10:31:54,032 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:32:04,682 - root - INFO - ================ recommend
+2022-11-15 10:32:05,235 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient = get_object_or_404(RecipeList,id=id).objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:32:21,281 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:37:30,246 - root - INFO - ================ recommend
+2022-11-15 10:37:30,869 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:37:44,449 - root - INFO - ================ recommend
+2022-11-15 10:37:44,524 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:39:01,326 - root - INFO - ================ recommend
+2022-11-15 10:39:01,362 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:43:19,532 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:43:32,648 - root - INFO - ================ recommend
+2022-11-15 10:43:33,307 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.get('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:45:22,126 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:45:34,466 - root - INFO - ================ recommend
+2022-11-15 10:45:34,952 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gitpro\project\project03\ingredients\views.py", line 104, in recommend
+    ingredient.objects.values('rc_ing')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 179, in __get__
+    raise AttributeError("Manager isn't accessible via %s instances" % cls.__name__)
+AttributeError: Manager isn't accessible via RecipeList instances
+2022-11-15 10:49:58,766 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:53:38,756 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:53:49,120 - root - INFO - ================ recommend
+2022-11-15 10:53:49,127 - root - INFO - recommending.....
+2022-11-15 10:53:49,141 - root - INFO - ================ recommend
+2022-11-15 10:53:49,669 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view ingredients.views.recommend didn't return an HttpResponse object. It returned None instead.
+2022-11-15 10:55:52,498 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 10:56:03,803 - root - INFO - ================ recommend
+2022-11-15 10:56:03,813 - root - INFO - recommending.....
+2022-11-15 10:56:03,829 - root - INFO - ================ recommend
+2022-11-15 10:56:04,362 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view ingredients.views.recommend didn't return an HttpResponse object. It returned None instead.
+2022-11-15 10:56:43,348 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:01:34,175 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:02:02,830 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:02:29,719 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:02:42,409 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:03:03,476 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:03:31,577 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:03:40,168 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:03:52,599 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:04:01,198 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:04:26,137 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:05:55,809 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:06:55,376 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:07:07,939 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:09:06,334 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:09:28,048 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:14:30,563 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:14:50,226 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:16:39,238 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:16:48,099 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:17:30,063 - django.request - WARNING - Not Found: /
+2022-11-15 11:17:39,154 - root - INFO - ================ recommend
+2022-11-15 11:17:39,185 - root - INFO - recommending.....
+2022-11-15 11:19:47,345 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:20:37,615 - root - INFO - ================ recommend
+2022-11-15 11:20:37,619 - root - INFO - recommending.....
+2022-11-15 11:21:09,767 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:21:27,415 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:22:04,561 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:22:53,720 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:23:05,883 - root - INFO - ================ recommend
+2022-11-15 11:23:05,893 - root - INFO - recommending.....
+2022-11-15 11:24:00,487 - root - INFO - ================ recommend
+2022-11-15 11:24:00,491 - root - INFO - recommending.....
+2022-11-15 11:25:57,072 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:26:28,342 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\views.py changed, reloading.
+2022-11-15 11:26:38,537 - root - INFO - ================ recommend
+2022-11-15 11:26:38,544 - root - INFO - recommending.....
+2022-11-15 11:30:50,034 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\models.py changed, reloading.
+2022-11-15 11:31:04,076 - django.utils.autoreload - INFO - C:\gitpro\project\project03\ingredients\models.py changed, reloading.
+2022-11-15 11:31:56,325 - root - INFO - ================ recommend
+2022-11-15 11:31:56,333 - root - INFO - recommending.....

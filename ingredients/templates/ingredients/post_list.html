@@ -51,20 +51,7 @@
 
 }
 
-
-  </script>
-  <script>
-    function selectAll(selectAll)  {
-      const checkboxes 
-         = document.querySelectorAll('input[type="checkbox"]');
-      
-      checkboxes.forEach((checkbox) => {
-        checkbox.checked = selectAll.checked
-      })
-    }
-
-
-  function selectDelete()  {
+function recommendation()  {
   // 선택된 목록 가져오기
   const query = 'input[type="checkbox"]:checked';
   const selectedEls = 
@@ -80,11 +67,11 @@
 
   var form = document.createElement('form');
   form.setAttribute('method','post');
-  form.setAttribute('action', '/ingredients/delete_all/');
+  form.setAttribute('action', '/ingredients/recipe_list/');
 
   var results = document.createElement('input');
   results.setAttribute('type', 'hidden');
-  results.setAttribute('name', 'del_ids');
+  results.setAttribute('name', 'rec_ids');
   results.setAttribute('value', result);
   form.appendChild(results);
 
@@ -92,7 +79,6 @@
   form.submit();
 
 }
-
 
   </script>
 </head>
@@ -231,7 +217,7 @@
                   </div>
                 </div>
               </div>
-
+              <a type="button" class="btn btn-outline-dark" onclick="recommendation();">레시피 추천</a>
 
         <!-- Side widget-->
         <div class="card mb-4">

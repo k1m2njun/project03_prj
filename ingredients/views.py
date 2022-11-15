@@ -91,6 +91,29 @@ def delete_all(request):
         
         return redirect('ingredients')
     
+@csrf_exempt
+def recommend(request):
+    logger.info('================ recommend')
+    
+    if(request.method == 'POST'):
+        ids = request.POST["rec_ids"]
+        ids = ids.split(',')
+        for idx in range(len(ids)):
+            id = ids[idx]
+            ingredient = Post.objects.get(id=id)
+            keyword = ingredient.ingredient
+            
+            recipe_list = RecipeList.objects.all().order_by('-rc_rec')
+            recipe_list = recipe_list.filter(rc_ing__icontains=keyword)
+
+            # ingredient.objects.values 
+            
+            logger.info('recommending.....')
+        
+    return render(
+            request,
+            'ingredients/recipe_list.html',{'recipe_list':recipe_list, 'keywords': keyword})
+    
           
 def upload_text(request):
     if(request.method == 'POST'):

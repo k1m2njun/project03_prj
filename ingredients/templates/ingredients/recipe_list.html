@@ -64,7 +64,7 @@
       <!-- Blog entries-->
       <!-- <div class="col-lg-8"> -->
         <!-- Featured blog post -->
-        <h1>레시피 추천</h1>
+        <h1>{{keywords}} 레시피 추천</h1>
         </br>
         <table class="table table-hover">
           <thead id="thead">
@@ -74,10 +74,11 @@
               <th>난이도</th>
               <th>소요시간</th>
               <th>재료</th>
+              <th>추천수</th>
             </tr>
           </thead>
           <tbody id="tbody">
-            {% for p in recipelists %}
+            {% for p in recipe_list %}
             <tr>
               <!-- <td>
                 <div class="form-check">
@@ -92,6 +93,7 @@
               <td>{{p.rc_diff}}</td>
               <td>{{p.rc_time}}</td>
               <td>{{p.rc_ing}}</td>
+              <td>{{p.rc_rec}}</td>
             </tr>
 
             {% endfor %}

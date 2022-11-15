@@ -25,9 +25,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 class RecipeList(models.Model):
     rc_num = models.IntegerField(blank=True, null=True)
     rc_name = models.CharField(max_length=100, blank=True, null=True)
-    rc_view = models.CharField(max_length=100, blank=True, null=True)
-    rc_rec = models.CharField(max_length=100, blank=True, null=True)
-    rc_scrap = models.CharField(max_length=100, blank=True, null=True)
+    rc_view = models.IntegerField(max_length=100, blank=True, null=True)
+    rc_rec = models.IntegerField(max_length=100, blank=True, null=True)
+    rc_scrap = models.IntegerField(max_length=100, blank=True, null=True)
     rc_type = models.CharField(max_length=100, blank=True, null=True)
     rc_sit = models.CharField(max_length=100, blank=True, null=True)
     rc_sort = models.CharField(max_length=100, blank=True, null=True)

@@ -8,6 +8,6 @@ urlpatterns = [
     path('create_image/',views.MnistImageCreate.as_view()),
     path('image_result/<int:pk>/',views.image_result),
     # path('recipe_list/',views.RecipeListView.as_view()),
-    path('recipe_list/',views.recipe_list),
+    path('recipe_list/',views.recommend,name='recipe_list'),
     path('delete_all/', views.delete_all),
 ]
