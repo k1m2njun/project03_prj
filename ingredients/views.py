@@ -15,13 +15,15 @@ import logging
 import tensorflow as tf
 
 def post_list(request):
-    posts = Ingredients.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
+    posts = Ingredients.objects.all().order_by('-pk')
+    mnposts = MnistImage.objects.all().order_by('-pk')# 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
 
     return render(
         request,
         'ingredients/post_list.html',
         {
             'posts':posts,
+            'mnposts':mnposts,
         }
     )
 
@@ -52,11 +54,22 @@ def delete_all(request):
             id = ids[idx]
             ingredient = Ingredients.objects.get(id=id)
             ingredient.delete()
-            
             logger.info('deleted.....')
         
         return redirect('ingredients')
-    
+    # 이미지로 입력한 데이터도 삭제 기능 필요
+    # elif(request.method == 'POST'):
+    #     ids = request.POST["del_ids"]
+    #     ids = ids.split(',')
+    #     for idx in range(len(ids)):
+    #         id = ids[idx]
+    #         mnistimage = MnistImage.objects.get(id=id)
+    #         mnistimage.delete()
+            
+    #         logger.info('deleted.....')
+        
+    #     return redirect('ingredients')
+    ##########################################################################재료 추천
 @csrf_exempt
 def recommend(request):
     logger.info('================ recommend')
@@ -67,10 +80,13 @@ def recommend(request):
         for idx in range(len(ids)):
             id = ids[idx]
             ingredient = Ingredients.objects.get(id=id)
+            mningredient = MnistImage.objects.get(id=id)
             keyword = ingredient.ingredient
+            mnkeyword = mningredient.result
             
             recipe_list = RecipeList.objects.all().order_by('-rc_rec')
             recipe_list = recipe_list.filter(rc_ing__icontains=keyword)
+            mnrecipe_list = recipe_list.filter(rc_ing__icontains=mnkeyword)
 
             # ingredient.objects.values 
             
@@ -79,24 +95,14 @@ def recommend(request):
     return render(
             request,
             'ingredients/recipe_list.html',
-            {'recipe_list':recipe_list, 'keywords': keyword})
+            {'recipe_list':recipe_list,
+             'mnrecipe_list':mnrecipe_list,
+             'keywords': keyword,
+             'mnkeywords': mnkeyword,
+             }
+            )
     
           
-def upload_text(request):
-    if(request.method == 'POST'):
-        form=TextForm(request.POST)
-        if form.is_valid():
-            ing = form.save(commit=False)
-            ing.save()
-            return redirect('ingredients')
-    else:
-        form=TextForm()
-    context={'form':form}
-    return render(
-            request,
-            'ingredients/upload_text.html',context)
-
-
 def upload_text(request):
     if(request.method == 'POST'):
         form=TextForm(request.POST)
@@ -151,8 +157,8 @@ def image_result(request,pk):
     
     try:
         cursor = connection.cursor()
-        query = '''INSERT INTO ingredients_ingredients (ingredient)
-                    SELECT result
+        query = '''INSERT INTO ingredients_ingredients (ingredient, author_id)
+                    SELECT result, author_id
                     FROM ingredients_mnistimage
                     WHERE id=(
                         SELECT max(id) FROM ingredients_mnistimage

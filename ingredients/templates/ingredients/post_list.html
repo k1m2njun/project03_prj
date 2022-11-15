@@ -81,7 +81,7 @@
 
   }
 </script>
-
+<form method="post" enctype="multipart/form-data">
 <!-- <body style="padding-top: 80px;"> -->
 <!-- 80 픽셀 여유를 두고 page container 아래를 찍어줌(메뉴에 가려지지 않게)-->
 
@@ -96,11 +96,12 @@
       </br>
       <table class="table table-hover">
         <thead id="thead">
+
           <tr>
             <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
                 onclick='selectAll(this)'></th>
             <th>번호</th>
-            <th>재료명</th>
+            <th>&nbsp;재료명</th>
             <th>유통기한</th>
             <th></th>
           </tr>
@@ -115,14 +116,14 @@
                 <label class="form-check-label" for="flexCheckDefault"></label>
               </div>
             </td>
-            <td>{{ forloop.counter }}</td>
+            <td>&nbsp;&nbsp;{{ forloop.counter }}</td>
             <td>{{ p.ingredient }}</td>
             <td>{{ p.expiration_date|date:'Y-m-d' }}</td>
             {% endif %}
           </tr>
           {% endfor %}
         </tbody>
-      </table>
+      </table
       <!-- Pagination-->
       <nav aria-label="Pagination">
         <hr class="my-0" />
@@ -201,5 +202,6 @@
     </div>
   </div>
 </div>
+</form>
 <!-- 본문내용 end -->
 {% endblock %}
