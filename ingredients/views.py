@@ -1,13 +1,9 @@
-from django import forms 
-from django.db import models, connection
+from django.db import connection
 from django.shortcuts import render,redirect
 from django.views.generic import CreateView
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
-from django.core.exceptions import PermissionDenied
-from django.utils.text import slugify
 
-from .models import Post,MnistImage, RecipeList
+from .models import Ingredients, MnistImage, RecipeList
 from .forms import TextForm
 
 from tensorflow.keras.models import load_model
@@ -19,7 +15,7 @@ import logging
 import tensorflow as tf
 
 def post_list(request):
-    posts = Post.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
+    posts = Ingredients.objects.all().order_by('-pk') # 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
 
     return render(
         request,
@@ -54,7 +50,7 @@ def delete_all(request):
         ids = ids.split(',')
         for idx in range(len(ids)):
             id = ids[idx]
-            ingredient = Post.objects.get(id=id)
+            ingredient = Ingredients.objects.get(id=id)
             ingredient.delete()
             
             logger.info('deleted.....')
@@ -70,7 +66,7 @@ def recommend(request):
         ids = ids.split(',')
         for idx in range(len(ids)):
             id = ids[idx]
-            ingredient = Post.objects.get(id=id)
+            ingredient = Ingredients.objects.get(id=id)
             keyword = ingredient.ingredient
             
             recipe_list = RecipeList.objects.all().order_by('-rc_rec')
@@ -155,7 +151,7 @@ def image_result(request,pk):
     
     try:
         cursor = connection.cursor()
-        query = '''INSERT INTO ingredients_post (ingredient)
+        query = '''INSERT INTO ingredients_ingredients (ingredient)
                     SELECT result
                     FROM ingredients_mnistimage
                     WHERE id=(

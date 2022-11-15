@@ -1,9 +1,9 @@
 from django import forms 
-from .models import Post
+from .models import Ingredients
 
 class TextForm(forms.ModelForm):
     class Meta:
-        model=Post
+        model=Ingredients
         fields=['ingredient','expiration_date']
         labels = {
             'ingredient': '재료명',

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-class Post(models.Model):
+class Ingredients(models.Model):
     ingredient = models.CharField(max_length=20)
     expiration_date = models.DateField(blank=True, null = True)    # 유통기한
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -13,7 +13,7 @@ class Post(models.Model):
 class MnistImage(models.Model):
     head_image = models.ImageField(upload_to='ingredients/images/%Y/%m/%d/')
     result = models.CharField(max_length=30,blank=True)
-    # author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'[{self.id}] {self.result}'
