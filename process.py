@@ -10,9 +10,9 @@ conn = sqlite3.connect(database)
 dtype={
     "rc_num" : "IntegerField",
     "rc_name" : "CharField",
-    "rc_view" : "CharField",
-    "rc_rec" : "CharField",
-    "rc_scrap" : "CharField",
+    "rc_view" : "IntegerField",
+    "rc_rec" : "IntegerField",
+    "rc_scrap" : "IntegerField",
     "rc_type" : "CharField",
     "rc_sit" : "CharField",
     "rc_sort" : "CharField",

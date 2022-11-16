@@ -7,6 +7,7 @@ from django.utils.text import slugify
 from .models import Post, Category, Tag, Comment #, Recipe_rec
 from .forms import CommentForm
 
+
 class PostList(ListView):
     model = Post
     ordering = '-pk'
@@ -183,3 +184,6 @@ def delete_comment(request, pk):
 #             'recipe_list' : recipe_list,
 #         }
 #     )
+
+
+

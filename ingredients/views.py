@@ -90,11 +90,25 @@ def recommend(request):
     return render(
             request,
             'ingredients/recipe_list.html',
-            {'recipe_list':recipe_list,
+            {'recipe_list': recipe_list,
              'keywords': keyword,
              }
             )
     
+@csrf_exempt
+def recommend_all(request):
+    logger.info('================ recommend')
+    
+    recipe_list = RecipeList.objects.all()
+        
+    return render(
+            request,
+            'ingredients/recipe_all.html',
+            {
+                'recipe_list' : recipe_list,
+             }
+            )
+          
           
 # def upload_text(request):
 #     if(request.method == 'POST'):

@@ -20,18 +20,19 @@ def about_me(request):
 def my_account(request):
     if request.method == 'POST': 
         if request.POST['password'] == request.POST['password']:
-            if request.POST['password1'] == request.POST['password2']:
-                user = User.objects.create_user(
-                    username=request.POST['username'],
-                    password=request.POST['password1'],
-                    email=request.POST['email'],
-                )
-                auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-                return redirect('/my_account')
+            user = User.objects.create(
+                password=request.POST['password1'],
+                username=request.POST['username'],
+                email=request.POST['email'],
+            )
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return redirect('/my_account')
         return render(request, 'single_pages/my_account.html')
     else:
         form = UserCreationForm
         return render(request, 'single_pages/my_account.html', {'form':form})
+
+                
     
 def signup(request):
     if request.method == 'POST':
