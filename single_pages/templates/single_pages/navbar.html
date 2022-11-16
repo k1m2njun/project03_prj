@@ -14,10 +14,12 @@
         font-size: 20px;
     }
 </style>
+
 <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
         <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>151 Gyejok-ro, Yuseong-gu, Daejeon, Republic of Korea</small>
+            <small><i class="fa fa-map-marker-alt me-2"></i>151 Gyejok-ro, Yuseong-gu, Daejeon, Republic of
+                Korea</small>
             <small class="ms-4"><i class="fa fa-envelope me-2"></i>admin@oneulmmg.com</small>
         </div>
         <div class="col-lg-6 px-5 text-end">
@@ -28,77 +30,65 @@
             <a class="text-body ms-3" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
-    
-<nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-    <a href="/" class="navbar-brand ms-4 ms-lg-0">
-        <!-- <img scr="{% static 'img/logo.png' %}" width="40px"> -->
-        <h1 class="fw-bold text-primary m-0 nav1">요<span class="text-secondary">리</span>조리</h1>
-    </a>
-    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-            <a href="/" class="nav-item nav-link active">홈</a>
-            <a href="/about_me" class="nav-item nav-link">개요</a>
-            <a href="/ingredients/recipe" class="nav-item nav-link">레시피목록</a>
-            {% if user.is_authenticated %}
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
-                <div class="dropdown-menu m-0">
-                    <a href="/ingredients/" class="dropdown-item">나의 냉장고</a>
-                    <a href="/ingredients/upload_image/" class="dropdown-item">이미지로 재료입력</a>
-                    <a href="/ingredients/upload_text/" class="dropdown-item">텍스트로 재료입력</a>
-                    <a href="404.html" class="dropdown-item">404 Page</a>
+
+    <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="/" class="navbar-brand ms-4 ms-lg-0">
+            <!-- <img scr="{% static 'img/logo.png' %}" width="40px"> -->
+            <h1 class="fw-bold text-primary m-0 nav1">요<span class="text-secondary">리</span>조리</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/" class="nav-item nav-link active">홈</a>
+                <a href="/about_me" class="nav-item nav-link">개요</a>
+                <a href="/ingredients/recipe" class="nav-item nav-link">레시피목록</a>
+                {% if user.is_authenticated %}
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
+                    <div class="dropdown-menu m-0">
+                        <a href="/ingredients/" class="dropdown-item">나의 냉장고</a>
+                        <a href="/ingredients/upload_image/" class="dropdown-item">이미지로 재료입력</a>
+                        <a href="/ingredients/upload_text/" class="dropdown-item">텍스트로 재료입력</a>
+                    </div>
+                    {% else %}
+                    <div>
+                        <a href="/accounts/login/" class="nav-link" data-bs-toggle="">마이페이지</a>
+                    </div>
+                    {% endif %}
                 </div>
-            {% else %}
-            <div>
-                <a href="/accounts/login/" class="nav-link" data-bs-toggle="">마이페이지</a>
             </div>
-            {% endif %}
-            
-            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            <div class="justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {% if user.socialaccount_set.all.0.get_avatar_url %}
+                            <img class="rounded-circle" width="25px"
+                                src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="">
+                            {% else %}
+                            <img class="rounded-circle" width="30px"
+                                src="https://doitdjango.com/avatar/id/1330/12d7c1cea8718f2e/svg/{{ user.email }}">
+                            {% endif %}
+                            &nbsp;{{ user.username }} 님 환영합니다!
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/my_account">내정보</a>
+                            <a class="dropdown-item" href="/accounts/logout/">로그아웃</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">로그인</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
-        <div class="d-none d-lg-flex ms-2">
-            <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                <small class="fa fa-search text-body"></small>
-            </a>
-            <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                <small class="fa fa-user text-body"></small>
-            </a>
-            <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                <small class="fa fa-shopping-bag text-body"></small>
-            </a>
-        </div>
-    </div>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </nav>
+</div>
 <!-- 네비게이션바 start -->
 <!-- <nav class="navbar navbar-expand-lg bg-white fixed-top">
     <div class="container-fluid">
@@ -175,7 +165,7 @@
 </nav> -->
 
 <!-- Modal start-->
-<!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -203,7 +193,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- Modal end -->
 
 <!-- 네비게이션바 end -->

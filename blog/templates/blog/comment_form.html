@@ -4,6 +4,7 @@
 {% block head_title %}Edit Comment - Blog{% endblock %}
 
 {% block main_area %}
+<body style="padding-top: 100px;">
     <h1>Edit Comment</h1>
     <hr/>
     <form method="Post" id="comment-form">{% csrf_token %}
@@ -11,4 +12,5 @@
         <br/>
         <button type="submit" class="btn btn-primary float-right">Submit</button>
     </form>
+</body>
 {% endblock %}

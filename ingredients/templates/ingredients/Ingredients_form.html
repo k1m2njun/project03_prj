@@ -3,15 +3,18 @@
 {% load static %}
 {% block head_title %}텍스트입력{% endblock %}
 {%block main_area%}
-<div class="container">
-<h1>텍스트로 입력하기</h1>
-<hr />
-<form method="post" enctype="multipart/form-data">
-    {%csrf_token%}
-    {{form|crispy}}
-    <div class="text-end mb-3">
-        <button type="submit" class="btn btn-primary">저장</button>
+
+<body style="padding-top: 100px;">
+    <div class="container">
+        <h1>텍스트로 입력하기</h1>
+        <hr />
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form|crispy}}
+            <div class="text-end mb-3">
+                <button type="submit" class="btn btn-primary">저장</button>
+            </div>
+        </form>
     </div>
-</form>
-</div>
+</body>
 {%endblock%}

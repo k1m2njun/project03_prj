@@ -2,7 +2,8 @@
 {% load crispy_forms_tags %}
 {% load static %}
 {% block head_title %}이미지입력{% endblock %}
-{%block main_area%}
+{% block main_area %}
+<body style="padding-top: 100px;">
 <div class="container">
 <h1>이미지로 입력하기</h1>
 <hr />
@@ -14,4 +15,5 @@
     </div>
 </form>
 </div>
+</body>
 {%endblock%}

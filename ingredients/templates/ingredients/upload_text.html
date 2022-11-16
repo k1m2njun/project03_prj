@@ -3,39 +3,42 @@
 {% block head_title %}텍스트로 입력하기{% endblock %}
 {% load static %}
 {% block main_area %}
-<div class="container">
 
-<h1>텍스트로 입력</h1>
-<!-- <hr/> -->
-<form method="post">
-    {% csrf_token %}
-    <!-- 오류표시 Start -->
-    {% if form.errors %}
-    <div class="alert alert-danger" role="alert">
-        {% for field in form %}
-            {% if field.errors %}
-            <div>
-                <strong>{{ field.label }}</strong>
-                {{ field.errors }}
+<body style="padding-top: 100px;">
+    <div class="container">
+
+        <h1>텍스트로 입력</h1>
+        <!-- <hr/> -->
+        <form method="post">
+            {% csrf_token %}
+            <!-- 오류표시 Start -->
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                {% for field in form %}
+                {% if field.errors %}
+                <div>
+                    <strong>{{ field.label }}</strong>
+                    {{ field.errors }}
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
             {% endif %}
-        {% endfor %}
+            <!-- 오류표시 End -->
+            <div class="mb-3">
+                <label for="ingredient" class="form-label">재료명</label>
+                <input type="text" class="form-control" name="ingredient" id="ingredient"
+                    value="{{ form.ingredient.value|default_if_none:'' }}">
+            </div>
+            <div class="mb-3">
+                <label for="expiration_date" class="form-label">유통기한</label>
+                <input type="date" class="form-control" name="expiration_date" id="expiration_date"
+                    value="{{ form.expiration_date.value|default_if_none:'-' }}">
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-outline-dark">확인</button>
+            </div>
     </div>
-    {% endif %}
-    <!-- 오류표시 End -->
-    <div class="mb-3">
-        <label for="ingredient" class="form-label">재료명</label>
-        <input type="text" class="form-control" name="ingredient" id="ingredient"
-            value="{{ form.ingredient.value|default_if_none:'' }}">
-    </div>
-    <div class="mb-3">
-        <label for="expiration_date" class="form-label">유통기한</label>
-        <input type="date" class="form-control" name="expiration_date" id="expiration_date"
-            value="{{ form.expiration_date.value|default_if_none:'-' }}">
-    </div>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-outline-dark">확인</button>
-    </div>
-</div>
-</form>
+    </form>
+</body>
 {%endblock%}

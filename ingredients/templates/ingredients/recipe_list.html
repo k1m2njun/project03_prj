@@ -3,14 +3,15 @@
 {% load static %}
 {% block head_title %}레시피 추천{% endblock %}
 {% block main_area %}
-  
+
+<body style="padding-top: 100px;">
   <!-- Page content-->
   <div class="container">
     <div class="row">
       <!-- Blog entries-->
       <!-- <div class="col-lg-8"> -->
-        <!-- Featured blog post -->
-        <h1>{{ keywords }}레시피 추천</h1>
+      <!-- Featured blog post -->
+      <h1>{{ keywords }}레시피 추천</h1>
       </br>
       <table class="table table-hover">
         <thead id="thead">
@@ -26,8 +27,12 @@
         <tbody id="tbody">
           {% for p in recipe_list %}
           <tr>
-            <td><a role="button" class="btm_image" id="img_btn" href="https://www.10000recipe.com/recipe/{{ p.rc_num }}"><img src="{% static '\ingredients\icon.png' %}"></a></td>
-            <td><p class="fw-bold fs-5">{{ p.rc_name }}</p></td>
+            <td><a role="button" class="btm_image" id="img_btn"
+                href="https://www.10000recipe.com/recipe/{{ p.rc_num }}"><img
+                  src="{% static '\ingredients\icon.png' %}"></a></td>
+            <td>
+              <p class="fw-bold fs-5">{{ p.rc_name }}</p>
+            </td>
             <td>{{ p.rc_diff }}</td>
             <td>{{ p.rc_time }}</td>
             <td align=left>{{ p.rc_ing }}</td>
@@ -37,7 +42,7 @@
         </tbody>
       </table>
 
-        <!-- Pagination-->
+      <!-- Pagination-->
       <nav aria-label="Pagination">
         <hr class="my-0" />
         <ul class="pagination justify-content-center my-4">
@@ -51,10 +56,10 @@
           <li class="page-item"><a class="page-link" href="#!">Older</a></li>
         </ul>
       </nav>
-   
+
     </div>
   </div>
 
   <!-- 본문내용 end -->
-
+</body>
 {% endblock %}

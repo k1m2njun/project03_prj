@@ -3,10 +3,13 @@
 {% block head_title %}추천 결과{% endblock %}
 {%load static%}
 {% block main_area %}
-<div>
-    {{result}}
-    <a role="button" class="btn btn-info btn-sm" href="/ingredients/">
-        <i class="fa-solid fa-file-pen"></i> 냉장고에 저장하기
-    </a>
-</div>
+
+<body style="padding-top: 100px;">
+    <div>
+        {{result}}
+        <a role="button" class="btn btn-info btn-sm" href="/ingredients/">
+            <i class="fa-solid fa-file-pen"></i> 냉장고에 저장하기
+        </a>
+    </div>
+</body>
 {% endblock %}
