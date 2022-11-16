@@ -1,7 +1,9 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 {% block head_title %}텍스트입력{% endblock %}
 {%block main_area%}
+<div class="container">
 <h1>텍스트로 입력하기</h1>
 <hr />
 <form method="post" enctype="multipart/form-data">
@@ -11,4 +13,5 @@
         <button type="submit" class="btn btn-primary">저장</button>
     </div>
 </form>
+</div>
 {%endblock%}

@@ -1,93 +1,96 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
 {% block head_title %}개요{% endblock %}
-{%load static%}
+{% load static %}
 {% block main_area %}
-<section class="bg-light margin-for-footer">
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-lg-8">
-                <h1>안녕하소.</h1>
-
-                <br />
-                <p class="lead">
-                    음악과 수영 좋아한대요 <br />
-                    하하하하하
-                </p>
-                <ul>
-                    <li>WORK EXPERIENCE</li>
-
-                    <ul>
-                        <li>크고 좋ㅇ른회사</li>
-                        <li>뭐뭐뭐뭐뭠</li>
-                    </ul>
-                    <li>EDUCATION</li>
-                    <ul>
-                        <li>공박, 장고공학, 아하하</li>
-                        <li>공박, 장고공학, 아하하</li>
-                        <li>공박, 장고공학, 아하하</li>
-                    </ul>
-                    <li>공박, 장고공학, 아하하</li>
-                    <ul>
-                        <li>DoItDjango, 이지픝ㅊㅇ히ㅏㅣㄹㄴ</li>
-                    </ul>
-                </ul>
-            </div>
-            <div class="col-lg-4">
-                <img class="img-fluid" src="{% static 'single_pages/images/my_back.png' %}">
-            </div>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <h1 class="display-3 mb-3 animated slideInDown">About Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-dark active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
         </div>
     </div>
-</section>
-<section class="bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>PORTFOLIO</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card" data-toggle="modal" data-target="#pycon2017">
-                    <img class="card-img-top" src="{% static 'single_pages/images/abc부트캠프_프로필사진.png' %}">
-                    <div class="card-body">
-                        <h5 class="card-title">파이썬으로 통계업무</h5>
-                        <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
+    <!-- Page Header End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                        <img class="img-fluid w-100" src="img/about.jpg">
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" data-toggle="modal" data-target="#inflearn_django2">
-                    <img class="card-img-top" src="{% static 'single_pages/images/123.png' %}">
-                    <div class="card-body">
-                        <h5 class="card-title">파이썬으로 통계업무</h5>
-                        <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card" data-toggle="modal" data-target="#automation">
-                    <img class="card-img-top" src="{% static 'single_pages/images/오오오.png' %}">
-                    <div class="card-body">
-                        <h5 class="card-title">파이썬으로 통계업무</h5>
-                        <p>오오오오오하하하하하하하하히히히힣1298472139857293847924387</p>
-                    </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-5 mb-4">Best Organic Fruits And Vegetables</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- modal -->
-<div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">...</div>
-</div>
-<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearn_django2ModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">...</div>
-</div>
-<div class="modal fade" id="automation" tabindex="-1" role="dialog" aria-labelledby="automationModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">...</div>
-</div>
+    <!-- About End -->
+
+    <!-- Firm Visit Start -->
+    <div class="container-fluid bg-primary bg-icon mt-5 py-6">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-7 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="display-5 text-white mb-3">Visit Our Firm</h1>
+                    <p class="text-white mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.</p>
+                </div>
+                <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
+                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="">Visit Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Firm Visit End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light bg-icon py-6">
+        <div class="container">
+            <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-5 mb-3">Our Features</h1>
+                <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/icon-1.png" alt="">
+                        <h4 class="mb-3">Natural Process</h4>
+                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/icon-2.png" alt="">
+                        <h4 class="mb-3">Organic Products</h4>
+                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="bg-white text-center h-100 p-4 p-xl-5">
+                        <img class="img-fluid mb-4" src="img/icon-3.png" alt="">
+                        <h4 class="mb-3">Biologically Safe</h4>
+                        <p class="mb-4">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed vero dolor duo.</p>
+                        <a class="btn btn-outline-primary border-2 py-2 px-4 rounded-pill" href="">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
 {% endblock %}

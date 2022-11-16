@@ -17,6 +17,7 @@ class MnistImage(models.Model):
     head_image = models.ImageField(upload_to='ingredients/images/%Y/%m/%d/')
     result = models.CharField(max_length=30,blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    expiration_date = models.DateField(blank=True, null = True)
 
     def __str__(self):
         return f'[{self.id}] {self.result}'

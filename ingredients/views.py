@@ -2,6 +2,7 @@ from django.db import connection
 from django.shortcuts import render,redirect
 from django.views.generic import CreateView
 from django.views.decorators.csrf import csrf_exempt
+from django.db.models import F 
 
 from .models import Ingredients, MnistImage, RecipeList
 from .forms import TextForm
@@ -15,9 +16,9 @@ import logging
 import tensorflow as tf
 
 def post_list(request):
-    posts = Ingredients.objects.all().order_by('-pk')
+    posts = Ingredients.objects.all().order_by(F('expiration_date').asc(nulls_last=True))
     mnposts = MnistImage.objects.all().order_by('-pk')# 데이터베이스에 쿼리를 날려 원하는 레코드 가져오기
-
+    
     return render(
         request,
         'ingredients/post_list.html',
@@ -139,7 +140,7 @@ class UploadText(CreateView):
 
 class MnistImageCreate(CreateView):
     model= MnistImage
-    fields=['head_image']
+    fields=['head_image', 'expiration_date']
     
     def form_valid(self, form):
         current_user = self.request.user
@@ -177,8 +178,8 @@ def image_result(request,pk):
     
     try:
         cursor = connection.cursor()
-        query = '''INSERT INTO ingredients_ingredients (ingredient, author_id)
-                    SELECT result, author_id
+        query = '''INSERT INTO ingredients_ingredients (ingredient, author_id, expiration_date)
+                    SELECT result, author_id, expiration_date
                     FROM ingredients_mnistimage
                     WHERE id=(
                         SELECT max(id) FROM ingredients_mnistimage
