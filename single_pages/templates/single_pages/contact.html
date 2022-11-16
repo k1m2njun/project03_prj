@@ -4,14 +4,40 @@
 {% block head_title %}고객센터{% endblock %}
 {% block main_area %}
 
+<style>
+    @font-face {
+        font-family: 'HSGyeoulNoonkott20';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    h1.nav1 {
+        font-family: 'HSGyeoulNoonkott20';
+        font-size: 20px;
+    }
+
+    @font-face {
+        font-family: 'GothicA1-Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    p.GothicA1 {
+        font-family: 'GothicA1-Light';
+        font-size: 18px;
+    }
+</style>
+
 <!-- Page Header Start -->
 <div class="container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
     <div class="container">
-        <h1 class="display-3 mb-3 animated slideInDown">Contact Us</h1>
+        <h1 class="display-3 mb-3 animated slideInDown nav1">Contact Us</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb mb-0">
                 <li class="breadcrumb-item"><a class="text-body" href="/">Home</a></li>
-                <li class="breadcrumb-item"><a class="text-body" href="/aoubt_me">About us</a></li>
+                <li class="breadcrumb-item"><a class="text-body" href="/about_me">About us</a></li>
                 <li class="breadcrumb-item text-dark active" aria-current="page">Contact Us</li>
             </ol>
         </nav>
@@ -22,30 +48,36 @@
 <!-- Contact Start -->
 <div class="container-xxl py-6">
     <div class="container">
-        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+        <div class="section-header text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s"
+            style="max-width: 500px;">
             <h1 class="display-5 mb-3">Contact Us</h1>
-            <p>Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            <p class="GothicA1">협업 문의, 기타 문의 등 언제나 열려있습니다.</p>
         </div>
         <div class="row g-5 justify-content-center">
             <div class="col-lg-5 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-primary text-white d-flex flex-column justify-content-center h-100 p-5">
                     <h5 class="text-white">Call Us</h5>
-                    <p class="mb-5"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-5 GothicA1"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <h5 class="text-white">Email Us</h5>
-                    <p class="mb-5"><i class="fa fa-envelope me-3"></i>admin@oneulmmg.com</p>
+                    <p class="mb-5 GothicA1"><i class="fa fa-envelope me-3"></i>admin@oneulmmg.com</p>
                     <h5 class="text-white">Office Address</h5>
-                    <p class="mb-5"><i class="fa fa-map-marker-alt me-3"></i>151 Gyejok-ro, Deajeon-si, Korea</p>
+                    <p class="mb-5 GothicA1"><i class="fa fa-map-marker-alt me-3"></i>151 Gyejok-ro, Deajeon-si, Korea
+                    </p>
                     <h5 class="text-white">Follow Us</h5>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://twitter.com/?lang=ko"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-1" href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light rounded-circle me-0" href="https://kr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://twitter.com/?lang=ko"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-1"
+                            href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light rounded-circle me-0"
+                            href="https://kr.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <p class="mb-4">우리와 함께 하고싶다면 >>> <a href="/signup">회원가입</a>.</p>
+                <p class="mb-4 GothicA1">우리와 함께 하고싶다면 >>> <a href="/signup">회원가입</a>.</p>
                 <form>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -68,7 +100,8 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
+                                <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                    style="height: 200px"></textarea>
                                 <label for="message">내용</label>
                             </div>
                         </div>
@@ -89,8 +122,9 @@
     <iframe class="w-100" style="height: 450px;"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.3757033528245!2d127.44166721486877!3d36.32744330186826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548c1ca0de1f1%3A0x821d3e28de81cac3!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rCDqs4TsobHroZwgMTUx!5e0!3m2!1sko!2skr!4v1668619072861!5m2!1sko!2skr"
         frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></>
-    <iframe class="w-100" height="450" style="height: 450px;" allowfullscreen="" aria-hidden="false" tabindex="0" frameborder="0"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.3757033528245!2d127.44166721486877!3d36.32744330186826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548c1ca0de1f1%3A0x821d3e28de81cac3!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rCDqs4TsobHroZwgMTUx!5e0!3m2!1sko!2skr!4v1668619072861!5m2!1sko!2skr"></iframe>
+        <iframe class="w-100" height="450" style="height: 450px;" allowfullscreen="" aria-hidden="false" tabindex="0"
+            frameborder="0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3214.3757033528245!2d127.44166721486877!3d36.32744330186826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356548c1ca0de1f1%3A0x821d3e28de81cac3!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rCDqs4TsobHroZwgMTUx!5e0!3m2!1sko!2skr!4v1668619072861!5m2!1sko!2skr"></iframe>
 </div>
 <!-- Google Map End -->
 {% endblock %}

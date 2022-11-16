@@ -20,7 +20,7 @@
 <form method="Post" enctype="multipart/form-data">{% csrf_token %}
 
   <!-- Page Header End -->
-  <header class="bg-light py-1">
+  <header class="bg-white py-1">
     {% if user.is_authenticated %}
     <!-- Page Header Start -->
     <!-- Carousel Start -->
@@ -28,7 +28,7 @@
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
+            <img class="w-100" src="{% static 'img/carousel-5.jpg' %}" alt="Image">
             <div class="carousel-caption">
               <div class="container">
                 <div class="row justify-content-start">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
+            <img class="w-100" src="{% static 'img/carousel-3.jpg' %}" alt="Image">
             <div class="carousel-caption">
               <div class="container">
                 <div class="row justify-content-start">
@@ -85,16 +85,23 @@
         </div>
         <div class="col-xl-2"></div> -->
     {% else %}
-
+<style>
+  .page-header5 {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background: url("{% static 'img/carousel-55.jpg' %}") top right no-repeat;
+    background-size: cover;
+}
+</style>
     <!-- 배경색 변경 -->
-    <div class="row row-cols-1 container-fluid page-header wow fadeIn" data-wow-delay="0.1s">
+    <div class="row row-cols-1 container-fluid page-header5 wow fadeIn" data-wow-delay="0.1s">
       <div class="container">
         <h1 class="display-3 mb-3 animated slideInDown nav1">SERVICE FOR YOU-RD.</h1>
         <nav aria-label="breadcrumb animated slideInDown">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a class="text-body" href="#">Home</a></li>
-            <li class="breadcrumb-item"><a class="text-body" href="#">Pages</a></li>
-            <li class="breadcrumb-item text-dark active" aria-current="page">Testimonial</li>
+            <li class="breadcrumb-item text-dark active" aria-current="page">Home</li>
+            <li class="breadcrumb-item"><a class="text-body" href="/about_me/">About Us</a></li>
+            <li class="breadcrumb-item"><a class="text-body" href="/contact/">Contact</a></li>
           </ol>
         </nav>
       </div>
