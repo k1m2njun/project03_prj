@@ -3,17 +3,24 @@
 {% load static %}
 {% block head_title %}이미지입력{% endblock %}
 {% block main_area %}
-<body style="padding-top: 100px;">
-<div class="container">
-<h1>이미지로 입력하기</h1>
-<hr />
-<form method="post" enctype="multipart/form-data">
-    {%csrf_token%}
-    {{form|crispy}}
-    <div class="text-end mb-3">
-        <button type="submit" class="btn btn-primary">이미지검색</button>
+
+<body style="padding-top: 150px;">
+    <div class="container">
+        <h1>이미지로 입력하기</h1>
+        <hr />
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/ingredients">나의 냉장고</a></li>
+            <li class="breadcrumb-item active">이미지로 입력</li>
+        </ol>
+        <br>
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form|crispy}}
+            <br>
+            <div class="text-end mb-3">
+                <button type="submit" class="btn btn-primary">이미지검색</button>
+            </div>
+        </form>
     </div>
-</form>
-</div>
 </body>
 {%endblock%}

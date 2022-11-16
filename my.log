@@ -6342,3 +6342,363 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 's
 2022-11-16 18:01:47,279 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
 2022-11-16 18:01:47,284 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
 2022-11-16 18:01:48,598 - root - INFO - ================ recommend
+2022-11-16 18:05:30,023 - root - INFO - ================ recommend
+2022-11-16 18:12:11,804 - django.request - WARNING - Not Found: /about_me/img/icon-1.png
+2022-11-16 18:12:11,806 - django.request - WARNING - Not Found: /about_me/img/about.jpg
+2022-11-16 18:12:11,807 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
+2022-11-16 18:12:11,808 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
+2022-11-16 18:12:16,336 - root - INFO - ================ recommend
+2022-11-16 18:16:56,300 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-16 18:22:37,444 - django.request - WARNING - Not Found: /about_me/img/about.jpg
+2022-11-16 18:22:37,466 - django.request - WARNING - Not Found: /about_me/img/icon-1.png
+2022-11-16 18:22:37,467 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
+2022-11-16 18:22:37,468 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
+2022-11-16 18:22:44,947 - root - INFO - ================ recommend
+2022-11-16 18:23:17,332 - root - INFO - Everything is normal. Relax!
+2022-11-16 18:23:17,333 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 18:23:17,333 - root - ERROR - Something unexpected and important happened.
+2022-11-16 18:23:17,333 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 18:23:28,489 - root - INFO - ================ recommend
+2022-11-16 18:23:28,492 - root - INFO - recommending.....
+2022-11-16 18:23:42,428 - root - INFO - ================ delete_all
+2022-11-16 18:23:42,448 - root - INFO - deleted.....
+2022-11-16 18:31:10,990 - django.request - WARNING - Not Found: /about_me/img/icon-1.png
+2022-11-16 18:31:10,991 - django.request - WARNING - Not Found: /about_me/img/about.jpg
+2022-11-16 18:31:10,994 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
+2022-11-16 18:31:10,996 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
+2022-11-16 19:19:32,481 - django.request - WARNING - Not Found: /about_me/img/icon-1.png
+2022-11-16 19:19:32,484 - django.request - WARNING - Not Found: /about_me/img/about.jpg
+2022-11-16 19:19:32,524 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
+2022-11-16 19:19:32,536 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
+2022-11-16 19:23:19,032 - django.request - WARNING - Not Found: /about_me/img/icon-1.png
+2022-11-16 19:23:19,033 - django.request - WARNING - Not Found: /about_me/img/about.jpg
+2022-11-16 19:23:19,034 - django.request - WARNING - Not Found: /about_me/img/icon-3.png
+2022-11-16 19:23:19,038 - django.request - WARNING - Not Found: /about_me/img/icon-2.png
+2022-11-16 19:49:53,595 - django.request - WARNING - Not Found: /about_me/signup/
+2022-11-16 19:50:02,481 - django.request - WARNING - Not Found: /about_me/signup/
+2022-11-16 19:52:05,586 - root - INFO - ================ recommend
+2022-11-16 20:12:21,059 - root - INFO - ================ recommend
+2022-11-16 20:16:40,708 - root - INFO - ================ recommend
+2022-11-16 20:25:48,152 - root - INFO - ================ recommend
+2022-11-16 20:31:19,951 - root - INFO - Everything is normal. Relax!
+2022-11-16 20:31:19,952 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 20:31:19,952 - root - ERROR - Something unexpected and important happened.
+2022-11-16 20:31:19,952 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 20:31:21,147 - tensorflow - WARNING - Model was constructed with shape (None, 128, 128, 3) for input KerasTensor(type_spec=TensorSpec(shape=(None, 128, 128, 3), dtype=tf.float32, name='vgg16_input'), name='vgg16_input', description="created by layer 'vgg16_input'"), but it was called on an input with incompatible shape (None, 128, 128).
+2022-11-16 20:31:21,149 - tensorflow - WARNING - Model was constructed with shape (None, 128, 128, 3) for input KerasTensor(type_spec=TensorSpec(shape=(None, 128, 128, 3), dtype=tf.float32, name='input_1'), name='input_1', description="created by layer 'input_1'"), but it was called on an input with incompatible shape (None, 128, 128).
+2022-11-16 20:32:26,264 - root - INFO - Everything is normal. Relax!
+2022-11-16 20:32:26,265 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 20:32:26,266 - root - ERROR - Something unexpected and important happened.
+2022-11-16 20:32:26,267 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 20:33:37,417 - root - INFO - Everything is normal. Relax!
+2022-11-16 20:33:37,418 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 20:33:37,418 - root - ERROR - Something unexpected and important happened.
+2022-11-16 20:33:37,419 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 20:34:17,628 - root - INFO - Everything is normal. Relax!
+2022-11-16 20:34:17,629 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 20:34:17,630 - root - ERROR - Something unexpected and important happened.
+2022-11-16 20:34:17,630 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 20:34:28,817 - root - INFO - ================ recommend
+2022-11-16 20:34:28,822 - root - INFO - recommending.....
+2022-11-16 20:35:27,208 - root - INFO - Everything is normal. Relax!
+2022-11-16 20:35:27,208 - root - WARNING - Something unexpected but not important happend.
+2022-11-16 20:35:27,210 - root - ERROR - Something unexpected and important happened.
+2022-11-16 20:35:27,210 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-16 21:15:36,593 - django.request - WARNING - Not Found: /about_me/signup/
+2022-11-16 21:22:13,586 - root - INFO - ================ recommend
+2022-11-16 21:22:28,637 - root - INFO - ================ recommend
+2022-11-16 21:23:12,409 - root - INFO - ================ delete_all
+2022-11-16 21:23:12,417 - root - INFO - deleted.....
+2022-11-16 21:23:12,426 - root - INFO - deleted.....
+2022-11-16 21:23:15,614 - root - INFO - ================ recommend
+2022-11-16 21:23:15,619 - root - INFO - recommending.....
+2022-11-16 21:23:15,621 - root - INFO - recommending.....
+2022-11-16 21:25:55,259 - root - INFO - ================ recommend
+2022-11-16 21:25:55,262 - root - INFO - recommending.....
+2022-11-16 21:25:55,262 - root - INFO - recommending.....
+2022-11-16 21:27:59,828 - root - INFO - ================ recommend
+2022-11-16 21:27:59,831 - root - INFO - recommending.....
+2022-11-16 21:28:00,020 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 91, in recommend
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(10)' from 'range(10)'
+2022-11-16 21:45:47,292 - django.request - WARNING - Not Found: /about_me/img/testimonial-1.jpg
+2022-11-16 21:45:47,303 - django.request - WARNING - Not Found: /about_me/img/testimonial-2.jpg
+2022-11-16 21:45:47,319 - django.request - WARNING - Not Found: /about_me/img/testimonial-3.jpg
+2022-11-16 21:45:47,339 - django.request - WARNING - Not Found: /about_me/img/testimonial-4.jpg
+2022-11-16 21:45:47,487 - django.request - WARNING - Not Found: /about_me/img/testimonial-1.jpg
+2022-11-16 21:45:47,488 - django.request - WARNING - Not Found: /about_me/img/testimonial-2.jpg
+2022-11-16 23:33:15,075 - django.request - WARNING - Not Found: /about_me/img/testimonial-1.jpg
+2022-11-16 23:33:15,084 - django.request - WARNING - Not Found: /about_me/img/testimonial-2.jpg
+2022-11-16 23:33:15,084 - django.request - WARNING - Not Found: /about_me/img/testimonial-3.jpg
+2022-11-16 23:33:15,109 - django.request - WARNING - Not Found: /about_me/img/testimonial-4.jpg
+2022-11-16 23:33:29,427 - django.request - WARNING - Not Found: /about_me/img/testimonial-1.jpg
+2022-11-16 23:33:29,430 - django.request - WARNING - Not Found: /about_me/img/testimonial-2.jpg
+2022-11-16 23:33:29,435 - django.request - WARNING - Not Found: /about_me/img/testimonial-3.jpg
+2022-11-16 23:33:29,444 - django.request - WARNING - Not Found: /about_me/img/testimonial-4.jpg
+2022-11-16 23:35:28,119 - django.request - WARNING - Not Found: /about_me/img/testimonial-4.jpg
+2022-11-16 23:35:28,122 - django.request - WARNING - Not Found: /about_me/img/testimonial-1.jpg
+2022-11-16 23:35:28,128 - django.request - WARNING - Not Found: /about_me/img/testimonial-2.jpg
+2022-11-16 23:35:28,131 - django.request - WARNING - Not Found: /about_me/img/testimonial-3.jpg
+2022-11-17 00:29:06,923 - django.request - WARNING - Not Found: /about_me/img/carousel-3.jpg
+2022-11-17 00:29:21,490 - django.request - WARNING - Not Found: /about_me/img/carousel-3.jpg
+2022-11-17 00:29:34,082 - django.request - WARNING - Not Found: /about_me/static/img/carousel-3.jpg
+2022-11-17 00:29:35,941 - django.request - WARNING - Not Found: /about_me/static/img/carousel-3.jpg
+2022-11-17 00:30:01,617 - django.request - WARNING - Not Found: /about_me/static/img/carousel-3.jpg
+2022-11-17 00:30:03,737 - django.request - WARNING - Not Found: /about_me/static/img/carousel-3.jpg
+2022-11-17 00:31:42,240 - django.request - WARNING - Not Found: /about_me/{% static 'img/carousel-3.jpg'
+2022-11-17 00:49:44,409 - root - INFO - ================ recommend
+2022-11-17 01:11:14,790 - root - INFO - Everything is normal. Relax!
+2022-11-17 01:11:14,792 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 01:11:14,793 - root - ERROR - Something unexpected and important happened.
+2022-11-17 01:11:14,795 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 01:11:21,170 - root - INFO - ================ recommend
+2022-11-17 01:11:21,177 - root - INFO - recommending.....
+2022-11-17 01:13:28,427 - root - INFO - ================ recommend
+2022-11-17 01:13:28,433 - root - INFO - recommending.....
+2022-11-17 01:13:54,763 - root - INFO - ================ recommend
+2022-11-17 01:14:26,997 - root - INFO - ================ recommend
+2022-11-17 01:14:47,341 - root - INFO - ================ recommend
+2022-11-17 01:15:43,406 - root - INFO - ================ recommend
+2022-11-17 01:15:44,082 - root - INFO - ================ recommend
+2022-11-17 01:16:21,150 - root - INFO - ================ recommend
+2022-11-17 01:46:04,408 - root - INFO - ================ recommend
+2022-11-17 01:46:23,696 - root - INFO - ================ recommend
+2022-11-17 01:46:57,879 - root - INFO - ================ recommend
+2022-11-17 01:47:14,920 - root - INFO - ================ recommend
+2022-11-17 01:47:20,764 - root - INFO - ================ recommend
+2022-11-17 01:57:09,234 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\urls.py changed, reloading.
+2022-11-17 01:57:22,666 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-17 01:57:30,178 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-17 02:37:50,612 - django.request - ERROR - Internal Server Error: /ingredients/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 22, in post_list
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 271: 'endblock'. Did you forget to register or load this tag?
+2022-11-17 02:37:54,676 - django.request - ERROR - Internal Server Error: /ingredients/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 22, in post_list
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 271: 'endblock'. Did you forget to register or load this tag?
+2022-11-17 02:38:31,603 - root - INFO - Everything is normal. Relax!
+2022-11-17 02:38:31,604 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 02:38:31,606 - root - ERROR - Something unexpected and important happened.
+2022-11-17 02:38:31,610 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 02:38:48,388 - root - INFO - Everything is normal. Relax!
+2022-11-17 02:38:48,390 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 02:38:48,392 - root - ERROR - Something unexpected and important happened.
+2022-11-17 02:38:48,392 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 02:39:01,356 - root - INFO - ================ recommend
+2022-11-17 02:43:03,627 - root - INFO - ================ recommend
+2022-11-17 02:44:48,114 - root - INFO - ================ recommend
+2022-11-17 02:45:13,635 - root - INFO - ================ recommend
+2022-11-17 02:48:18,943 - root - INFO - ================ recommend
+2022-11-17 02:48:45,560 - root - INFO - ================ recommend
+2022-11-17 02:51:51,597 - root - INFO - ================ recommend
+2022-11-17 02:53:15,033 - root - INFO - ================ recommend
+2022-11-17 02:53:17,963 - root - INFO - ================ recommend
+2022-11-17 02:53:50,924 - root - INFO - ================ recommend
+2022-11-17 02:54:41,424 - root - INFO - ================ recommend
+2022-11-17 02:56:12,525 - root - INFO - ================ recommend
+2022-11-17 02:57:56,072 - root - INFO - ================ recommend
+2022-11-17 02:58:38,121 - root - INFO - ================ recommend
+2022-11-17 02:58:51,417 - root - INFO - ================ recommend
+2022-11-17 02:59:36,132 - root - INFO - ================ recommend
+2022-11-17 03:01:15,137 - root - INFO - ================ recommend
+2022-11-17 03:03:46,232 - root - INFO - ================ recommend
+2022-11-17 03:07:49,529 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:07:49,530 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:07:49,530 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:07:49,530 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:08:16,976 - root - INFO - ================ delete_all
+2022-11-17 03:08:16,985 - root - INFO - deleted.....
+2022-11-17 03:08:18,801 - root - INFO - ================ recommend
+2022-11-17 03:08:18,808 - root - INFO - recommending.....
+2022-11-17 03:09:30,708 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:09:30,709 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:09:30,709 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:09:30,711 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:10:03,229 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:10:03,230 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:10:03,230 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:10:03,231 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:10:25,316 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:10:25,316 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:10:25,316 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:10:25,316 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:10:39,122 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:10:39,122 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:10:39,122 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:10:39,123 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:10:40,065 - tensorflow - WARNING - 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000022E607E43A0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2022-11-17 03:12:53,719 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:12:53,720 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:12:53,723 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:12:53,725 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:12:54,730 - tensorflow - WARNING - 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x0000022E6036E4C0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2022-11-17 03:14:00,509 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:14:00,514 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:14:00,515 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:14:00,516 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:14:36,367 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:14:36,371 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:14:36,371 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:14:36,372 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:16:06,541 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:16:06,543 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:16:06,544 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:16:06,546 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:17:00,306 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:17:00,308 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:17:00,309 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:17:00,309 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:17:35,718 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:17:35,718 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:17:35,719 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:17:35,719 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:18:09,155 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:18:09,156 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:18:09,158 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:18:09,160 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:18:24,500 - root - INFO - Everything is normal. Relax!
+2022-11-17 03:18:24,500 - root - WARNING - Something unexpected but not important happend.
+2022-11-17 03:18:24,501 - root - ERROR - Something unexpected and important happened.
+2022-11-17 03:18:24,501 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-17 03:19:13,449 - root - INFO - ================ delete_all
+2022-11-17 03:19:13,477 - root - INFO - deleted.....
+2022-11-17 03:19:13,488 - root - INFO - deleted.....
+2022-11-17 03:19:13,512 - root - INFO - deleted.....
+2022-11-17 03:19:13,529 - root - INFO - deleted.....
+2022-11-17 03:19:16,626 - root - INFO - ================ recommend
+2022-11-17 03:19:16,639 - root - INFO - recommending.....

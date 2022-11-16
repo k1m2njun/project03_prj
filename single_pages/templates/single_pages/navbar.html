@@ -13,6 +13,18 @@
         font-family: 'HSGyeoulNoonkott20';
         font-size: 20px;
     }
+
+    @font-face {
+        font-family: 'GothicA1-Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    a.GothicA1 {
+        font-family: 'GothicA1-Light';
+        font-size: 20px;
+    }
 </style>
 
 <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -41,20 +53,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/" class="nav-item nav-link active">홈</a>
-                <a href="/about_me" class="nav-item nav-link">개요</a>
-                <a href="/ingredients/recipe" class="nav-item nav-link">레시피목록</a>
+                <a href="/" class="nav-item nav-link active GothicA1 fw-bold">홈</a>
+                <a href="/about_me" class="nav-item nav-link GothicA1 fw-bold">개요</a>
+                <a href="/ingredients/recipe" class="nav-item nav-link GothicA1 fw-bold">레시피목록</a>
                 {% if user.is_authenticated %}
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
+                    <a href="#" class="nav-link dropdown-toggle GothicA1 fw-bold" data-bs-toggle="dropdown">마이페이지</a>
                     <div class="dropdown-menu m-0">
-                        <a href="/ingredients/" class="dropdown-item">나의 냉장고</a>
-                        <a href="/ingredients/upload_image/" class="dropdown-item">이미지로 재료입력</a>
-                        <a href="/ingredients/upload_text/" class="dropdown-item">텍스트로 재료입력</a>
+                        <a href="/ingredients/" class="dropdown-item GothicA1">나의 냉장고</a>
+                        <a href="/ingredients/upload_image/" class="dropdown-item GothicA1">이미지로 재료입력</a>
+                        <a href="/ingredients/upload_text/" class="dropdown-item GothicA1">텍스트로 재료입력</a>
+                        <a href="/contact/" class="dropdown-item GothicA1">고객센터</a>
                     </div>
+                    
                     {% else %}
                     <div>
-                        <a href="/accounts/login/" class="nav-link" data-bs-toggle="">마이페이지</a>
+                        <a href="/accounts/login/" class="nav-link GothicA1" data-bs-toggle="">마이페이지</a>
                     </div>
                     {% endif %}
                 </div>
@@ -63,7 +77,7 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle GothicA1" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             {% if user.socialaccount_set.all.0.get_avatar_url %}
                             <img class="rounded-circle" width="25px"
@@ -75,8 +89,8 @@
                             &nbsp;{{ user.username }} 님 환영합니다!
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="/my_account">내정보</a>
-                            <a class="dropdown-item" href="/accounts/logout/">로그아웃</a>
+                            <a class="dropdown-item GothicA1" href="/my_account">내정보</a>
+                            <a class="dropdown-item GothicA1" href="/accounts/logout/">로그아웃</a>
                         </div>
                     </li>
                     {% else %}

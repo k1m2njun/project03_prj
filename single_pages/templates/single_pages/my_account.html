@@ -3,6 +3,30 @@
 {% load socialaccount %}
 {% block head_title %}내 정보{% endblock %}
 {% block main_area %}
+<style>
+    @font-face {
+        font-family: 'HSGyeoulNoonkott20';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    h1.nav1 {
+        font-family: 'HSGyeoulNoonkott20';
+        font-size: 20px;
+    }
+
+    @font-face {
+        font-family: 'GothicA1-Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+    h4.GothicA1 {
+        font-family: 'GothicA1-Light';
+        font-size: 30px;
+    }
+</style>
 
 <body style="padding-top: 100px;">
     <form method="Post" enctype="multipart/form-data">{% csrf_token %}
@@ -17,14 +41,15 @@
                         <img class="rounded-circle" width="150px"
                             src="https://doitdjango.com/avatar/id/1330/12d7c1cea8718f2e/svg/{{ user.email }}">
                         {% endif %}
-                        <span class="font-weight-bold fs-2">{{ user }}</span><span class="text-black-50">
-                            {{ user.email }}</span><span> </span>
+                        <br>
+                        <span class="font-weight-bold fs-2">{{ user }}</span>
+                        <span class="text-black-50">{{ user.email }}</span><span> </span>
                     </div>
                 </div>
                 <div class="col-md-7 border-right">
                     <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 class="text-right">내 정보</h4>
+                            <h4 class="text-right GothicA1">내 정보</h4>
                         </div>
                         <div class="row mt-2 mb-2">
                             <div class="col-md-12"><label for="floatingInputUsername">이름</label><input type="text"

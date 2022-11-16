@@ -1,15 +1,26 @@
 {% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
-{% block head_title %}추천 결과{% endblock %}
-{%load static%}
+{% block head_title %}레시피 추천 결과{% endblock %}
+{% load static %}
 {% block main_area %}
 
-<body style="padding-top: 100px;">
-    <div>
-        {{result}}
-        <a role="button" class="btn btn-info btn-sm" href="/ingredients/">
-            <i class="fa-solid fa-file-pen"></i> 냉장고에 저장하기
-        </a>
+<body style="padding-top: 150px;">
+    <div class="container-fluid">
+        <h1>이미지 인식 결과</h1>
+        <hr />
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="/ingredients">나의 냉장고</a></li>
+            <li class="breadcrumb-item"><a href="/ingredients/upload_image">이미지로 입력</a></li>
+            <li class="breadcrumb-item active">이미지 인식 결과</li>
+        </ol>
+        <br>
+        <button type="button" class="btn btn-secondary btn-lg">{{ result }}</button>
+        <!-- <h5>{{result}}</h5> -->
+        <div class="text-end mb-3">
+            <a role="button" class="btn btn-outline-primary" href="/ingredients/">
+                <i class="fa-solid fa-door-open"></i> 냉장고에 넣기
+            </a>
+        </div>
     </div>
 </body>
 {% endblock %}

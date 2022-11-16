@@ -4,6 +4,19 @@
 {% block head_title %}레시피 추천{% endblock %}
 {% block main_area %}
 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+  <!-- <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" /> -->
+
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
 <body style="padding-top: 100px;">
   <!-- Page content-->
   <div class="container">
@@ -11,54 +24,83 @@
       <!-- Blog entries-->
       <!-- <div class="col-lg-8"> -->
       <!-- Featured blog post -->
-      <h1>{{ keywords }}레시피 추천</h1>
+      <h1>{{ keywords }} 레시피 추천</h1>
       </br>
-      <table class="table table-hover">
-        <thead id="thead">
-          <tr>
-            <th>일련번호</th>
-            <th>요리명</th>
-            <th>난이도</th>
-            <th>소요시간</th>
-            <th>재료</th>
-            <th>추천수</th>
-          </tr>
-        </thead>
-        <tbody id="tbody">
-          {% for p in recipe_list %}
-          <tr>
-            <td><a role="button" class="btm_image" id="img_btn"
-                href="https://www.10000recipe.com/recipe/{{ p.rc_num }}"><img
-                  src="{% static '\ingredients\icon.png' %}"></a></td>
-            <td>
-              <p class="fw-bold fs-5">{{ p.rc_name }}</p>
-            </td>
-            <td>{{ p.rc_diff }}</td>
-            <td>{{ p.rc_time }}</td>
-            <td align=left>{{ p.rc_ing }}</td>
-            <td>{{ p.rc_rec }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <hr />
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="/ingredients">나의 냉장고</a></li>
+        <li class="breadcrumb-item active">추천 레시피</li>
+      </ol>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div class="mb-3">
 
-      <!-- Pagination-->
-      <nav aria-label="Pagination">
-        <hr class="my-0" />
-        <ul class="pagination justify-content-center my-4">
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-          </li>
-          <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-          <li class="page-item"><a class="page-link" href="#!">2</a></li>
-          <li class="page-item"><a class="page-link" href="#!">3</a></li>
-          <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-          <li class="page-item"><a class="page-link" href="#!">15</a></li>
-          <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-        </ul>
-      </nav>
+        </div>
+      </div>
+      <br>
+      <!-- <div class="card mb-4">
+            <div class="card-body">
+              <a target="_blank" href="upload_image/">이미지로 입력</a>하기와 <a target="_blank" href="upload_text/">텍스트로
+                입력</a>하기 중 원하는 재료 입력 방법을 선택하세요.<br>
+              이미지로 입력하기는 재료 사진을 자체 모델이 무슨 재료인지를 인식하여 텍스트로 변환하는 기능입니다.
+            </div>
+          </div> -->
+      <div class="card mb-4">
+        <div class="card-header">
+          <i class="fa-solid fa-door-open"></i>
+          재료 목록
+        </div>
 
+        <div class="card-body">
+          <table id="datatablesSimple">
+            <thead>
+              <tr>
+                <th class="text-center">레시피 URL</th>
+                <th class="text-center">요리명</th>
+                <th class="text-center">난이도</th>
+                <th class="text-center">소요시간</th>
+                <th class="text-center">재료</th>
+                <th class="text-center">추천수</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th class="text-center">레시피 URL</th>
+                <th class="text-center">요리명</th>
+                <th class="text-center">난이도</th>
+                <th class="text-center">소요시간</th>
+                <th class="text-center">재료</th>
+                <th class="text-center">추천수</th>
+              </tr>
+            </tfoot>
+            <tbody id="tbody">
+              {% for p in recipe_list %}
+              <tr>
+                <td class="text-center"><a role="button" class="btm_image" id="img_btn"
+                    href="https://www.10000recipe.com/recipe/{{ p.rc_num }}"><img
+                      src="{% static '\ingredients\icon.png' %}"></a></td>
+                <td>
+                  <p class="fw-bold fs-9">{{ p.rc_name }}</p>
+                </td>
+                <td class="text-center">{{ p.rc_diff }}</td>
+                <td class="text-center">{{ p.rc_time }}</td>
+                <td align=left>{{ p.rc_ing }}</td>
+                <td class="text-center">{{ p.rc_rec }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
+  <br>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="{% static 'js/scripts.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+  <script src="{% static 'js/datatables-simple-demo.js' %}"></script>
+
+  <!-- 본문내용 end -->
 
   <!-- 본문내용 end -->
 </body>

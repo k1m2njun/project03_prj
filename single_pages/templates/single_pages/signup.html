@@ -3,13 +3,13 @@
 {% load static %}
 {% block head_title %}오늘뭐먹지{% endblock %}
 {% block main_area %}
-
+<body style="padding-top: 100px;">
 <form method="Post" enctype="multipart/form-data">{% csrf_token %}
     <header class="bg-light py-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xl-5 mx-auto">
-                    <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                    <div class="card flex-row my-5 border-0 shadow rounded-4 overflow-hidden">
                         <div class="card-img-left d-none d-md-flex"></div>
                         <div class="card-body p-4 p-sm-5">
                             <h5 class="card-title text-center mb-5 fw-light fs-5">회원가입</h5> <!--성,이름,id,email,password-->
@@ -52,5 +52,5 @@
         </div>
     </header>
 </form>
-
+</body>
 {% endblock %}

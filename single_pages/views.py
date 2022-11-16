@@ -5,6 +5,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
 
+def contact(request):
+    return render(
+        request,
+        'single_pages/contact.html'
+    )
+
 def landing(request):
     return render(
         request,
