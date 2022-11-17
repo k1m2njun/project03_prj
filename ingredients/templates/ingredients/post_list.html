@@ -27,7 +27,6 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-  <link href="/css/styles.css" rel="stylesheet" type="text/css />
   <script src=" https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous">
   </script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -38,8 +37,8 @@
 
   <script>
     function selectAll(selectAll) {
-      const checkboxes
-        = document.querySelectorAll('input[type="checkbox"]');
+
+     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
       checkboxes.forEach((checkbox) => {
         checkbox.checked = selectAll.checked
@@ -160,37 +159,24 @@
                     <table id="datatablesSimple">
                       <thead>
                         <tr>
-                          <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                              onclick='selectAll(this)'></th>
+                          <th>선택</th>
                           <th>번호</th>
                           <th>&nbsp;재료명</th>
                           <th>유통기한</th>
                         </tr>
                       </thead>
-                      <tfoot>
-                        <tr>
-                          <th><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                              onclick='selectAll(this)'></th>
-                          <th>번호</th>
-                          <th>&nbsp;재료명</th>
-                          <th>유통기한</th>
-                        </tr>
-                      </tfoot>
                       <tbody>
                         {% for p in posts %}
+                        {% if user.is_authenticated and user == p.author %}
                         <tr>
-                          {% if user.is_authenticated and user == p.author %}
                           <td>
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="{{ p.id }}" id="flexCheckDefault">
-                              <label class="form-check-label" for="flexCheckDefault"></label>
-                            </div>
+                          <input class="form-check-input" type="checkbox" value="{{ p.id }}" >
                           </td>
                           <td>&nbsp;&nbsp;{{ forloop.counter }}</td>
                           <td>{{ p.ingredient }}</td>
                           <td>{{ p.expiration_date|date:'Y-m-d' }}</td>
-                          {% endif %}
                         </tr>
+                        {% endif %}
                         {% endfor %}
                       </tbody>
                     </table>

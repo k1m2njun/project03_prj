@@ -78,10 +78,14 @@ def recommend(request):
     if(request.method == 'POST'):
         ids = request.POST["rec_ids"]
         ids = ids.split(',')
+        
+        keywords =''
+        
         for idx in range(len(ids)):
             id = ids[idx]
             ingredient = Ingredients.objects.get(id=id)
             keyword = ingredient.ingredient
+            keywords += ' '+ keyword
             recipe_list = RecipeList.objects.all().order_by('-rc_rec')
             recipe_list = recipe_list.filter(rc_ing__icontains=keyword)
             # ingredient.objects.values 
@@ -92,7 +96,7 @@ def recommend(request):
             request,
             'ingredients/recipe_list.html',
             {'recipe_list': recipe_list,
-             'keywords': keyword,
+             'keywords': keywords,
              }
             )
     

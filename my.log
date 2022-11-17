@@ -6793,3 +6793,58 @@ ValueError: Field 'id' expected a number but got ''.
 2022-11-17 04:47:05,235 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
 2022-11-17 04:47:51,887 - root - INFO - ================ recommend
 2022-11-17 04:47:51,892 - root - INFO - recommending.....
+2022-11-17 09:46:01,843 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-17 09:47:02,455 - root - INFO - ================ recommend
+2022-11-17 10:26:34,036 - root - INFO - ================ delete_all
+2022-11-17 10:26:34,082 - root - INFO - deleted.....
+2022-11-17 10:26:34,094 - root - INFO - deleted.....
+2022-11-17 10:33:40,415 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-17 10:45:00,136 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:45:00,194 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:45:02,624 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:45:54,681 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:45:54,706 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:46:01,962 - root - INFO - ================ recommend
+2022-11-17 10:46:01,968 - root - INFO - recommending.....
+2022-11-17 10:46:01,968 - root - INFO - recommending.....
+2022-11-17 10:46:48,929 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:46:48,964 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:46:50,317 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:46:50,361 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:47:21,307 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:47:21,333 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:47:48,798 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:47:48,834 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:48:17,976 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:48:17,997 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:48:31,214 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:48:31,239 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:49:01,442 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:50:29,857 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:50:39,544 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:50:50,248 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:50:59,422 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:51:23,243 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:51:34,417 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-17 10:51:40,892 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:51:45,749 - root - INFO - ================ recommend
+2022-11-17 10:51:45,753 - root - INFO - recommending.....
+2022-11-17 10:51:45,753 - root - INFO - recommending.....
+2022-11-17 10:52:35,214 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:52:35,256 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:52:36,301 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:52:36,969 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:52:38,938 - django.request - WARNING - Not Found: /css/styles.css
+2022-11-17 10:58:36,500 - root - INFO - ================ recommend
+2022-11-17 10:58:36,503 - root - INFO - recommending.....
+2022-11-17 10:58:36,503 - root - INFO - recommending.....
+2022-11-17 11:09:56,816 - root - INFO - ================ recommend
+2022-11-17 11:09:56,820 - root - INFO - recommending.....
+2022-11-17 11:11:04,475 - root - INFO - ================ recommend
+2022-11-17 11:11:04,475 - root - INFO - recommending.....
+2022-11-17 11:12:28,123 - root - INFO - ================ recommend
+2022-11-17 11:12:28,123 - root - INFO - recommending.....
+2022-11-17 11:12:46,745 - root - INFO - ================ recommend
+2022-11-17 11:12:46,754 - root - INFO - recommending.....
+2022-11-17 11:13:24,615 - root - INFO - ================ recommend
+2022-11-17 11:13:24,633 - root - INFO - recommending.....

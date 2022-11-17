@@ -75,10 +75,10 @@
             <tbody id="tbody">
               {% for p in recipe_list %}
               <tr>
-                <td class="text-center"><a role="button" class="btm_image" id="img_btn"
+                <td class="text-center"><a role="button" class="btm_image" id="img_btn" target="_blank"
                     href="https://www.10000recipe.com/recipe/{{ p.rc_num }}"><img
                       src="{% static 'img/icon1.png' %}"></a></td>
-                <td>
+                <td class="text-center">
                   <p class="fw-bold fs-9">{{ p.rc_name }}</p>
                 </td>
                 <td class="text-center">{{ p.rc_diff }}</td>
