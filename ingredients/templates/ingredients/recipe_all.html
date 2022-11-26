@@ -4,6 +4,31 @@
 {% block head_title %}레시피 목록{% endblock %}
 {% block main_area %}
 
+<style>
+  div.minjun {
+    border: 1px solid #bcbcbc;
+  }
+  table.minjun {
+    width: 1100px;
+  }
+  th.minjun, td.minjun {
+    width: 150px;
+
+  }
+  th.minjun1, td.minjun1 {
+    width: 200px;
+
+  }
+  th.minjun2, td.minjun2 {
+    width: 750px;
+
+  }
+  th.minjun3, td.minjun3 {
+    width: 90px;
+
+  }
+
+</style>
 
 <head>
     <meta charset="utf-8" />
@@ -22,15 +47,7 @@
     <div class="container">
         <div id="layoutSidenav_content">
             <main>
-                <colgroup>
-                    <col style="width:15%">
-                    <col style="width:15%">
-                    <col style="width:15%">
-                    <col style="width:20%">
-                    <col style="width:30%">
-                    <col style="width:15%">
-                </colgroup>
-                <div class="col-lg-11">
+                <div class="container-fluid col-lg-12">
 
                     <div class="container-fluid px-4">
                         <br>
@@ -50,46 +67,46 @@
                                 </div>
                             </div> -->
                         <br>
-                        <div class="card mb-4">
+                        <div class="col col-xxl-12 card mb-4">
                             <div class="card-header">
                                 <i class="fa-solid fa-door-open"></i>
                                 재료 목록
                             </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
+                            <div class="card-body minjun">
+                                <table class="minjun" id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">레시피 URL</th>
-                                            <th class="text-center">요리명</th>
-                                            <th class="text-center">난이도</th>
-                                            <th class="text-center">소요시간</th>
-                                            <th class="text-center">재료</th>
-                                            <th class="text-center">추천수</th>
+                                            <th class="text-center minjun">레시피<br>바로가기</th>
+                                            <th class="text-center minjun1">요리명</th>
+                                            <th class="text-center minjun">난이도</th>
+                                            <th class="text-center minjun">소요시간</th>
+                                            <th class="text-center minjun2">재료</th>
+                                            <th class="text-center minjun3">추천수</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th class="text-center">레시피 URL</th>
-                                            <th class="text-center">요리명</th>
-                                            <th class="text-center">난이도</th>
-                                            <th class="text-center">소요시간</th>
-                                            <th class="text-center">재료</th>
-                                            <th class="text-center">추천수</th>
+                                            <th class="text-center minjun">레시피<br>바로가기</th>
+                                            <th class="text-center minjun1">요리명</th>
+                                            <th class="text-center minjun">난이도</th>
+                                            <th class="text-center minjun">소요시간</th>
+                                            <th class="text-center minjun2">재료</th>
+                                            <th class="text-center minjun3">추천수</th>
                                         </tr>
                                     </tfoot>
                                     <tbody id="tbody">
                                         {% for p in recipe_list %}
-                                        <tr>
-                                            <td class="text-center"><a role="button" class="btm_image" id="img_btn"
+                                        <tr class="fs-7">
+                                            <td class="text-center minjun"><a role="button" class="btm_image" id="img_btn"
                                                     href="https://www.10000recipe.com/recipe/{{ p.rc_num }}">
-                                                    <img src="{% static 'img/icon1.png' %}"></a></td>
-                                            <td class="text-center">
-                                                <p class="fw-bold fs-9">{{ p.rc_name }}</p>
+                                                    <img src="{% static 'img/icon1.png' %}" width="30" height="30"></a></td>
+                                            <td class="text-center minjun1">
+                                                <p class="fw-bold fs-8">{{ p.rc_name }}</p>
                                             </td>
-                                            <td class="text-center">{{ p.rc_diff }}</td>
-                                            <td class="text-center">{{ p.rc_time }}</td>
-                                            <td align=left>{{ p.rc_ing }}</td>
-                                            <td class="text-center">{{ p.rc_rec }}</td>
+                                            <td class="text-center minjun">{{ p.rc_diff }}</td>
+                                            <td class="text-center minjun">{{ p.rc_time }}</td>
+                                            <td align="left" class="minjun2">{{ p.rc_ing }}</td>
+                                            <td class="text-center minjun3">{{ p.rc_rec }}</td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
