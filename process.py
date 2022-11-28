@@ -2,7 +2,7 @@ import pandas as pd
 import sqlite3
 
 # Read csv file.
-df = pd.read_csv("recipe.csv")
+df = pd.read_csv("recipe012.csv")
 
 # Connect to (create) database.
 database = "db.sqlite3"
@@ -21,6 +21,7 @@ dtype={
     "rc_ing" : "CharField",
     "rc_diff" : "CharField",
     "rc_time" : "CharField",
+    "rc_src" : "CharField",
 }
 df.to_sql(name='ingredients_recipelist', con=conn, if_exists='replace', dtype=dtype, index=True, index_label="id")
 conn.close()

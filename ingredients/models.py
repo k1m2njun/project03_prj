@@ -55,5 +55,6 @@ class RecipeList(models.Model):
     rc_ing = models.CharField(max_length=200, blank=True, null=True)
     rc_diff = models.CharField(max_length=100, blank=True, null=True, choices=DiffChoices.choices)
     rc_time = models.CharField(max_length=100, blank=True, null=True, choices=TimeChoices.choices)
+    rc_src = models.CharField(max_length=200, blank=True, null=True)
     # author = models.ForeignKey("Author", on_delete=models.CASCADE)
 

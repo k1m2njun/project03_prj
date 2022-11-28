@@ -115,9 +115,9 @@
                                         {% for p in recipe_list %}
                     
                                         <tr class="fs-7">
-                                            <td class="text-center minjun"><a role="button" class="btm_image" id="img_btn"
-                                                    href="https://www.10000recipe.com/recipe/{{ p.rc_num }}">
-                                                    <img src="{% static 'img/icon1.png' %}" width="30" height="30"></a></td>
+                                            <td class="text-center minjun"><a role="button" class="btm_image" id="img_btn" href="https://www.10000recipe.com/recipe/{{ p.rc_num }}">
+                                                    <!-- <img src="{% static 'img/icon1.png' %}" width="30" height="30"></a></td> -->
+                                                    <img src="{{ p.rc_src }}" width="50" height="50"></a></td>
                                             <td class="text-center minjun1">
                                                 <p class="fw-bold fs-8">{{ p.rc_name }}</p>
                                             </td>
@@ -162,7 +162,7 @@
     </ul>
     {% endif %}
     
-    <script src="{% static 'js/datatables-simple-demo.js' %}"></script><!-- 문제가 되는 js...-->
+    <!-- <script src="{% static 'js/datatables-simple-demo.js' %}"></script>문제가 되는 js... -->
     <!-- <script type="text/javascript" src="/js/common/jquery/prototype.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
