@@ -9,3 +9,6 @@ class TextForm(forms.ModelForm):
             'ingredient': '재료명',
             'expiration_date': '유통기한',
         }  
+        
+class RecipeListFilterForm(forms.Form):
+    name = forms.CharField()

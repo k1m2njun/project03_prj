@@ -44,13 +44,16 @@ INSTALLED_APPS = [
     "ingredients",
     "single_pages",
     
-    'crispy_forms',
+    "crispy_forms",
     "crispy_bootstrap5",
     
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+    
+    "django_filters",
+    "rest_framework",
     
 ]
 

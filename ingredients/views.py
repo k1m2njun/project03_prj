@@ -5,7 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.db.models import F 
 
 from .models import Ingredients, MnistImage, RecipeList
-from .forms import TextForm
 
 from tensorflow.keras.models import load_model
 from PIL import Image
@@ -100,21 +99,30 @@ def recommend(request):
              }
             )
     
+from .filters import ListingFilter
+    
 @csrf_exempt
 def recommend_all(request):
-    logger.info('================ recommend')
-    
-    recipe_list = RecipeList.objects.all()
+    logger.info('================ recipe all data')
+    recipe_filter = ListingFilter(request.GET, queryset=RecipeList.objects.all())
+    # name = request.GET.get('name')
+    # recipe_list = RecipeList.objects.all()
+    # f = RecipeFilter(request.GET, queryset=RecipeFilter.objects.all())
+    # listing_filter = ListingFilter(request.GET, queryset=recipe_list)
+    # if name:
+    #     recipe_list = recipe_list.filter(name__icontains=name)
+    context = {
+        'form':recipe_filter.form,
+        'recipe_list':recipe_filter.qs
+        }
         
     return render(
             request,
             'ingredients/recipe_all.html',
-            {
-                'recipe_list' : recipe_list,
-             }
+            context
             )
-          
-          
+
+
 # def upload_text(request):
 #     if(request.method == 'POST'):
 #         form=TextForm(request.POST)
@@ -206,8 +214,11 @@ def image_result(request,pk):
         }
     )
     
+
 def recipe_list(request):
-    recipelists = RecipeList.objects.all()
+    logger.info('================ recipe recommended')
+    model = RecipeList
+    recipelists = model.objects.all()
 
     return render(
         request,
@@ -216,3 +227,4 @@ def recipe_list(request):
             'recipelists':recipelists,
         }
     )
+

@@ -26,6 +26,22 @@ class MnistImage(models.Model):
         return f'/ingredients/image_result/{self.pk}/'
 
 class RecipeList(models.Model):
+    class DiffChoices(models.TextChoices):
+        아무나 = '아무나'
+        초급 = '초급'
+        중급 = '중급'
+        고급 = '고급'
+        신 = '신의경지'
+    class TimeChoices(models.TextChoices):
+        오분 = '5분이내'
+        십분 = '10분이내'
+        십오분 = '15분이내'
+        삼십분 = '30분이내'
+        한시간 = '60분이내'
+        한시간반 = '90분이내'
+        두시간 = '2시간이내'
+        두시간이상 = '2시간이상'
+        
     rc_num = models.IntegerField(blank=True, null=True)
     rc_name = models.CharField(max_length=100, blank=True, null=True)
     rc_view = models.IntegerField(blank=True, null=True)
@@ -37,5 +53,7 @@ class RecipeList(models.Model):
     rc_nick = models.CharField(max_length=100, blank=True, null=True)
     rc_info = models.CharField(max_length=100, blank=True, null=True)
     rc_ing = models.CharField(max_length=200, blank=True, null=True)
-    rc_diff = models.CharField(max_length=100, blank=True, null=True)
-    rc_time = models.CharField(max_length=100, blank=True, null=True)
+    rc_diff = models.CharField(max_length=100, blank=True, null=True, choices=DiffChoices.choices)
+    rc_time = models.CharField(max_length=100, blank=True, null=True, choices=TimeChoices.choices)
+    # author = models.ForeignKey("Author", on_delete=models.CASCADE)
+
