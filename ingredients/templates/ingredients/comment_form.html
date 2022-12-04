@@ -1,16 +1,15 @@
-{% extends 'blog/base_full_width.html' %}
+{% extends 'blog/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-{% block head_title %}Edit Comment - Blog{% endblock %}
-
+{% block head_title %}코멘트{% endblock %}
 {% block main_area %}
 <body style="padding-top: 100px;">
-    <h1>Edit Comment</h1>
+    <h1>코멘트</h1>
     <hr/>
     <form method="Post" id="comment-form">{% csrf_token %}
         {{ form | crispy }}
         <br/>
-        <button type="submit" class="btn btn-primary float-right">Submit</button>
+        <button type="submit" class="btn btn-primary float-right">제출</button>
     </form>
 </body>
 {% endblock %}

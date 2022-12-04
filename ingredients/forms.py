@@ -1,5 +1,6 @@
 from django import forms 
 from .models import Ingredients
+from .models import Comment
 
 class TextForm(forms.ModelForm):
     class Meta:
@@ -12,3 +13,9 @@ class TextForm(forms.ModelForm):
         
 class RecipeListFilterForm(forms.Form):
     name = forms.CharField()
+    
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('content', )

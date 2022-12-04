@@ -1,0 +1,238 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}이벤트{% endblock %}
+{% load static %}
+{% block main_area %}
+
+<style>
+    @font-face {
+        font-family: 'HSGyeoulNoonkott20';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HSGyeoulNoonkott20.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    h1.nav1 {
+        font-family: 'HSGyeoulNoonkott20';
+        font-size: 10px;
+    }
+    h1.nav2 {
+        font-family: 'HSGyeoulNoonkott20';
+        font-size: 30px;
+    }
+
+    @font-face {
+        font-family: 'GothicA1-Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    p.GothicA1 {
+        font-family: 'GothicA1-Light';
+        font-size: 20px;
+    }
+
+    .page-header {
+        padding-top: 12rem;
+        padding-bottom: 6rem;
+        background: url("{% static 'img/carousel-55.jpg' %}") top right no-repeat;
+        background-size: cover;
+    }
+</style>
+    
+<body>
+  <div class="py-5 text-center">
+    <br><br><br><br><br>
+    <h2 class="display-4 fw-normal">E V E N T</h2>
+    <div class="py-5 text-center">
+      <p class="lead">🎉 요리조리와 함께하는 다양한 혜택과 이벤트 🎉</p>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      당첨자 발표
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">요리조리</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h3>다음에 도전해보세요 !</h3></br>
+            이벤트에 응모해주셔서 감사합니다.</br>
+            아쉽게도 응모에는 당첨되지 않으셨습니다. </br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-3 text-center">
+    <div class="col-sm-1 themed-grid-col"></div>
+    <div type="button" class="col-sm-3 themed-grid-col btn btn-outline-success btn-lg">전체보기</div>
+    <div class="d-flex" style="width:35px;">
+      <div class="vr"></div>
+    </div>
+    <div type="button" class="col-sm-3 themed-grid-col btn btn-light btn-lg">진행중</div>
+    <div class="d-flex" style="width:35px;">
+      <div class="vr"></div>
+    </div>
+    <div type="button" class="col-sm-3 themed-grid-col btn btn-light btn-lg">종료</div>
+  </div>
+
+  <hr class="my-4">
+    <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt1.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">집에서 간편하게 만나보는 맛집! <br> 황금찜닭 밀키트 출시! 🐔</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a type="button" class="btn btn-sm btn-outline-success" href="/event/9/">View</a>
+                    </div>
+                    <small class="text-muted">22.11.18-22.12.17</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt2.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">나만의 홈레스토랑 ~ <br> 하우스비프 스테이크 밀키트 출시!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.18-22.12.17</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt3.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">나만의 홈레스토랑 ~ <br> 빠네크림 파스타 밀키트 출시!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.18-22.12.17</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt4.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">내 방에서 먹는 뜨끈한 라볶이 <br> 집콕! 라볶이 밀키트 출시!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.18-22.12.17</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt5.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">예? 수능을 보셨다고요? 수험표 가져오세요! <br> 20% 할인해 드립니다. ╰(*°▽°*)╯</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.17-23.03.01</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt6.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">아직도 재료 하나 하나 사셔서 요리하세요? <br> 밀키트 첫구매 할인 이벤트!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.17-22.12.07</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt7.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">22년도 고생하셨습니다 (/≧▽≦)/ <br> 요리조리에서 실시하는 연말감사제!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.11.16-22.12.07</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt8.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">Follow Follow Me []~(￣▽￣)~* <br> 요리조리와 친구가 되어주세요 !</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">상시 이벤트</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="card shadow-sm">
+                <img class="mx-auto" src="{% static 'img/evt9.png' %}" alt="" width="410" height="420">
+                <div class="card-body">
+                  <p class="card-text">다가올 크리스마스엔? (✿◡‿◡)<br> 요리조리 세일 이벤트 !</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-success">View</button>
+                    </div>
+                    <small class="text-muted">22.12.24-22.12.25</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+    </nav>
+</body>
+{% endblock %}

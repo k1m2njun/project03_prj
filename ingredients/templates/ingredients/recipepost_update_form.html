@@ -1,0 +1,28 @@
+{%extends 'blog/base.html'%}
+{% block head_title %}레시피 커뮤니티{% endblock %}
+{%block main_area%}
+
+<body style="padding-top: 150px;">
+    <div class="container">
+        <h1>수정</h1>
+        <hr />
+        <form method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            <!-- form 태그 안에 무조건 적고 시작, csrf 공격에서 보호 위함-->
+            <table>
+                {{form}}
+                <!-- views에 정의된 필드명 보고 알아서 만들어줌-->
+                <!-- action을 장고에서 알아서 처리해줌 -->
+                <tr>
+                    <th><label for="id_tags_str">태그:</label></th>
+                    <td><input type="text" name="tags_str" id="id_tags_str" value="{{tags_str_default}}"> </td>
+                        <!--Tags: 눌러도 커서가 -->
+                </tr>
+            </table>
+            <div class="text-end mb-3">
+                <button type="submit" class="btn btn-primary">제출</button>
+            </div>
+        </form>
+    </div>
+</body>
+{%endblock%}

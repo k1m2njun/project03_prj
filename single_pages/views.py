@@ -2,8 +2,7 @@ from django.contrib import auth
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate
-from django.http import HttpResponse
+
 
 def contact(request):
     return render(
@@ -65,6 +64,17 @@ def signup(request):
 #         fields = ['email', 'password']    
 
 # def signin(request):
+#     email = request.POST['email']
+#     password = request.POST['password']
+#     user = authenticate(request, email=email, password=password)
+#     if user is not None:
+#         auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+#         return redirect('/')
+#     else:
+#         return HttpResponse('로그인 실패. 다시 시도 하세요.')
+
+
+# def signin(request):
 #     # if request.method == 'POST':
 #     #     form = LoginForm(request.POST)
 #     email = request.POST['email']
@@ -99,3 +109,15 @@ def signup(request):
 #         auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 #     else:
 #         return HttpResponse('로그인 실패. 다시 시도 하세요.')
+
+def event(request):
+    return render(
+        request,
+        'single_pages/event.html'
+    )
+    
+def ggimdak(request):
+    return render(
+        request,
+        'single_pages/ggimdak.html'
+    )

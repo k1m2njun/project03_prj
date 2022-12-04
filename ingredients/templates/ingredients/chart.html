@@ -1,0 +1,269 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}마이페이지{% endblock %}
+{% load static %}
+{% block main_area %}
+
+<style>
+    @font-face {
+        font-family: 'GangwonEduPowerExtraBoldA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+    h1.nav2 {
+        font-family: 'GangwonEduPowerExtraBoldA';
+        font-size: 30px;
+
+    }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <script src=" https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous">
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body style="padding-top: 150px;">
+    <div class="row mb-2">
+        <div class="col-md-6 order-md-2" style="text-align : center;">
+            <br><br>
+
+            <!-- 그래프-->
+            <!-- Content Row -->
+            <div class="row">
+
+
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-success h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                                        당월<br>남은 재료</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">총 {{posts_counts}}건
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa-solid fa-bowl-food fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-primary h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                        전월 대비<br> 사용한 재료</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">+{{this_month_vpn_count}}건
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa-solid fa-utensils fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-success h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                        전월 대비<br> 버린 재료</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">+{{last_month_vpn_count}}건
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa-solid fa-trash-can fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+                const ctx = document.getElementById('myChart');
+                var bar_chart_vpn = {{ bar_chart_vpn }};
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2022년 12월', '2023년 1월', '2023년 2월', '2023년 3월', '2023년 4월', '2023년 5월'],
+                        datasets: [{
+                            label: '사용',
+                            backgroundColor: 'rgb(75, 192, 192, 0.2)',
+                            borderColor: 'rgb(75, 192, 192)',
+                            data: bar_chart_vpn[0],
+                            borderWidth: 1
+                        },
+                        {
+                            label: '버림',
+                            borderWidth: 1,
+                            backgroundColor: 'rgb(255, 99, 132, 0.2)',
+                            borderColor: 'rgb(255, 99, 132)',
+                            data: bar_chart_vpn[1]
+
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+
+
+            <!-- 프로필 표시-->
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+        </div>
+        <div class="col-md-4 order-md-1 text-align : center;">
+            <form method="Post" enctype="multipart/form-data"><input type="hidden" name="csrfmiddlewaretoken"
+                    value="iiOP91Kz4IredyvTzDd8YvWJ0PboFO4bbOYgjqXbhz6tMDjLnZoifBA0KKyxBhAf">
+                <div class="container rounded bg-teal mt-5 mb-5">
+                    <div class="row" style="text-align : center;">
+                        <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                            {% if user.socialaccount_set.all.0.get_avatar_url %}
+                            <img class="rounded-circle" width="150px"
+                                src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="">
+                            {% else %}
+                            <img class="rounded-circle" width="150px"
+                                src="https://doitdjango.com/avatar/id/1330/12d7c1cea8718f2e/svg/{{ user.email }}">
+                            {% endif %}
+                            <br>
+                            <span class="font-weight-bold fs-2"><img class="img" width="50px"
+                                    src="\static\img\sprout.png">{{ user }}님</span>
+                            <span class="text-black-50">{{ user.email }}</span><span> </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<br>
+
+<!-- 테이블 -->
+<div class="container rounded bg-teal mt-5 mb-5">
+    <div class="col-lg-11">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-door-open"></i>
+                사용한 재료 목록
+            </div>
+            <div class="card-body">
+                <table id="datatablesSimple">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>&nbsp;재료명</th>
+                            <th>사용/버린 날짜</th>
+                            <th>사용/버림
+                            <th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for p in post1 %}
+                            {% if user.is_authenticated and user == p.author %}
+                                {% if p.isDone != None %}
+                                    {% if p.isDone == '사용' %}
+                                        <tr class='text-success'>
+                                            <td>&nbsp;&nbsp;{{ forloop.counter }}</td>
+                                            <td>{{ p.ingredient }}</td>
+                                            <td>{{ p.updated_at|date:'Y-m-d' }}</td>
+                                            <td>{{ p.isDone }}</td>
+                                        </tr>
+                                    {% else %}
+                                        <tr class='text-danger'>
+                                            <td>&nbsp;&nbsp;{{ forloop.counter }}</td>
+                                            <td>{{ p.ingredient }}</td>
+                                            <td>{{ p.updated_at|date:'Y-m-d' }}</td>
+                                            <td>{{ p.isDone }}</td>
+                                        </tr>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="container rounded bg-teal mt-5 mb-5">
+    <div class="col-lg-11">
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img src="\static\img\money-bag.png" width="140" height="140"></ㅇ>
+                <h2 class="fw-normal" style="padding-top: 40px;">비용</h2>
+                <p class="GothicA1"> 음식물 처리 비용을 절약하였습니다. </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="\static\img\recycling.png" width="140" height="140"></ㅇ>
+                <h2 class="fw-normal" style="padding-top: 40px;">환경</h2>
+                <p class="GothicA1"> 당신의 관심으로 환경을 지켰습니다. </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="\static\img\convenient.png" width="140" height="140"></ㅇ>
+                <h2 class="fw-normal" style="padding-top: 40px;">편의</h2>
+                <p class="GothicA1"> 당신이 편하면, 지구도 편합니다. </p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    </div>
+</div>
+
+<br>
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'lib/wow/wow.min.js' %}"></script>
+<script src="{% static 'lib/easing/easing.min.js' %}"></script>
+<script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+<script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="/static/js/datatables-simple-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+
+
+<!-- Template Javascript -->
+<script src="{% static 'js/main.js' %}"></script>
+
+
+<script src="https://kit.fontawesome.com/3d21bdf518.js" crossorigin="anonymous"></script>
+
+{% endblock %}
+

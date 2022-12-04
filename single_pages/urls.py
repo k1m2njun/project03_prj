@@ -9,5 +9,7 @@ urlpatterns = [
     path('my_account/', views.my_account),
     path('signup/', views.signup),
     path('contact/', views.contact),
+    path('event/', views.event),
+    path('event/9/', views.ggimdak),
     
     ]

@@ -38805,3 +38805,1223 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
 2022-11-28 21:56:14,043 - root - INFO - ================ recipe all data
 2022-11-28 21:56:54,735 - root - INFO - ================ recipe all data
 2022-11-28 21:56:58,707 - root - INFO - ================ recipe all data
+2022-11-28 22:16:59,579 - root - INFO - ================ recommend
+2022-11-28 22:16:59,586 - root - INFO - recommending.....
+2022-11-28 22:18:02,116 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:18:47,050 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:19:30,992 - root - INFO - ================ recommend
+2022-11-28 22:19:30,996 - root - INFO - recommending.....
+2022-11-28 22:21:06,091 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:21:12,783 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:21:27,059 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:21:33,553 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:21:40,130 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:21:52,057 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:22:01,338 - root - INFO - ================ recommend
+2022-11-28 22:22:01,592 - django.request - ERROR - Internal Server Error: /ingredients/recipe_list/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 89, in recommend
+    recipe_list = recipe_filter.filter(rc_ing__icontains=keyword)
+AttributeError: 'ListingFilter' object has no attribute 'filter'
+2022-11-28 22:23:01,936 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-28 22:23:15,987 - root - INFO - ================ recommend
+2022-11-28 22:23:15,992 - root - INFO - recommending.....
+2022-11-28 22:25:27,168 - root - INFO - ================ recommend
+2022-11-28 22:25:27,171 - root - INFO - recommending.....
+2022-11-28 22:32:13,240 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:00,469 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:08,076 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:15,221 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:37,858 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:45,528 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:33:51,750 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:34:20,002 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:34:26,223 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:34:38,359 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:36:03,353 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:37:24,576 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-28 22:40:25,335 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\views.py changed, reloading.
+2022-11-29 18:03:45,153 - django.request - WARNING - Not Found: /favicon-32x32.png
+2022-11-29 18:03:45,161 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:03:45,227 - django.request - WARNING - Not Found: /favicon-16x16.png
+2022-11-29 18:03:45,256 - django.request - WARNING - Not Found: /favicon-96x96.png
+2022-11-29 18:03:45,278 - django.request - WARNING - Not Found: /android-icon-192x192.png
+2022-11-29 18:03:49,293 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:00,378 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:06,826 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:30,368 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:37,174 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:41,345 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:07:45,005 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:08:09,271 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:08:10,852 - django.request - WARNING - Not Found: /manifest.json
+2022-11-29 18:08:18,777 - django.request - WARNING - Not Found: /manifest.json
+2022-11-30 03:48:04,383 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 03:48:32,708 - django.request - ERROR - Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 46, in signup
+    user = User.objects.create_user(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+2022-11-30 04:26:10,097 - root - INFO - ================ recipe all data
+2022-11-30 04:26:23,262 - root - INFO - ================ recipe all data
+2022-11-30 04:28:00,074 - root - INFO - ================ recipe all data
+2022-11-30 04:28:31,640 - root - INFO - ================ recipe all data
+2022-11-30 04:31:22,216 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\urls.py changed, reloading.
+2022-11-30 04:31:39,551 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\urls.py changed, reloading.
+2022-11-30 04:31:55,868 - django.utils.autoreload - INFO - C:\gittest\project03_prj\single_pages\urls.py changed, reloading.
+2022-11-30 04:32:00,271 - django.request - WARNING - Not Found: /ggimdak/
+2022-11-30 04:32:00,350 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 04:32:43,002 - django.request - WARNING - Not Found: /ggimdak/
+2022-11-30 04:36:18,762 - root - INFO - ================ recipe all data
+2022-11-30 04:39:32,985 - root - INFO - Everything is normal. Relax!
+2022-11-30 04:39:32,985 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 04:39:32,985 - root - ERROR - Something unexpected and important happened.
+2022-11-30 04:39:32,986 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 04:39:50,946 - root - INFO - ================ delete_all
+2022-11-30 04:39:50,961 - root - INFO - deleted.....
+2022-11-30 04:39:58,997 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 04:44:24,384 - root - INFO - Everything is normal. Relax!
+2022-11-30 04:44:24,384 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 04:44:24,385 - root - ERROR - Something unexpected and important happened.
+2022-11-30 04:44:24,385 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 04:44:43,845 - root - INFO - ================ delete_all
+2022-11-30 04:44:43,854 - root - INFO - deleted.....
+2022-11-30 04:44:57,769 - root - INFO - ================ delete_all
+2022-11-30 04:44:57,788 - root - INFO - deleted.....
+2022-11-30 04:45:05,298 - root - INFO - Everything is normal. Relax!
+2022-11-30 04:45:05,299 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 04:45:05,300 - root - ERROR - Something unexpected and important happened.
+2022-11-30 04:45:05,300 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 04:45:12,733 - root - INFO - ================ delete_all
+2022-11-30 04:45:12,765 - root - INFO - deleted.....
+2022-11-30 04:46:48,530 - root - INFO - Everything is normal. Relax!
+2022-11-30 04:46:48,531 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 04:46:48,531 - root - ERROR - Something unexpected and important happened.
+2022-11-30 04:46:48,532 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 04:47:41,716 - root - INFO - ================ recommend
+2022-11-30 04:47:41,719 - root - INFO - recommending.....
+2022-11-30 13:57:53,809 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 14:09:38,325 - root - INFO - ================ recipe all data
+2022-11-30 14:09:41,091 - django.request - ERROR - Internal Server Error: /ingredients/user_recipe/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: ingredients_recipepost
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\gittest\project03_prj\ingredients\views.py", line 247, in get_context_data
+    context['no_category_recipepost_count'] = RecipePost.objects.filter(category=None).count()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: ingredients_recipepost
+2022-11-30 14:09:41,225 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 14:17:46,419 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
+2022-11-30 14:20:14,552 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
+2022-11-30 14:32:54,852 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:33:14,345 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:33:23,814 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:33:37,675 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:35:02,102 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:35:14,619 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:35:37,608 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:36:46,612 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:36:56,113 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:04,489 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:14,143 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:21,269 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:33,880 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:48,861 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:37:57,434 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:38:28,133 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:39:40,049 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:40:08,135 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:41:25,144 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:42:45,654 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:43:02,405 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:43:09,502 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:43:31,220 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:43:38,952 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:43:48,484 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:44:25,523 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:45:57,730 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:46:06,122 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:46:14,773 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:46:45,836 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\migrations\0001_initial.py changed, reloading.
+2022-11-30 14:53:18,219 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 15, in landing
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+2022-11-30 14:53:22,148 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 15, in landing
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+2022-11-30 14:54:32,906 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 15, in landing
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+2022-11-30 14:54:42,252 - django.request - ERROR - Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\admin\sites.py", line 261, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\admin\sites.py", line 230, in inner
+    if not self.has_permission(request):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\admin\sites.py", line 203, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+2022-11-30 15:09:31,407 - django.request - ERROR - Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 187, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 15, in landing
+    return render(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 315, in render
+    match = condition.eval(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\defaulttags.py", line 878, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 266, in inner
+    self._setup()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\utils\functional.py", line 419, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 25, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\middleware.py", line 11, in get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 191, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\__init__.py", line 60, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 53, in __getitem__
+    return self._session[key]
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\base.py", line 192, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 42, in load
+    s = self._get_session_from_db()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+2022-11-30 15:14:37,777 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 15:16:00,989 - root - INFO - ================ recipe all data
+2022-11-30 15:16:02,738 - django.request - WARNING - Not Found: /ingredients/user_recipe/static/css/styless.css
+2022-11-30 15:16:02,743 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:16:59,300 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:17:14,542 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:17:43,812 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:17:45,242 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:18:14,659 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:18:42,089 - django.request - WARNING - Not Found: /ingredients/user_recipe/js/scriptss.js
+2022-11-30 15:24:55,203 - root - INFO - ================ recipe all data
+2022-11-30 15:25:04,189 - django.request - WARNING - Not Found: /ingredients/user_recipe/upload_image/
+2022-11-30 15:25:56,414 - django.request - WARNING - Not Found: /create_post/
+2022-11-30 15:26:21,818 - django.request - WARNING - Not Found: /user_recipe/create_post/
+2022-11-30 15:34:41,338 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 15:37:02,151 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 15:37:27,073 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:38:27,975 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:38:56,197 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:38:56,197 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:39:06,508 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:39:06,508 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:39:36,218 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:40:13,382 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:40:18,991 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 15:40:31,097 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 16:50:39,590 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 16:53:56,602 - root - INFO - ================ recipe all data
+2022-11-30 16:54:01,034 - root - INFO - ================ recipe all data
+2022-11-30 16:54:42,522 - root - INFO - ================ recipe all data
+2022-11-30 17:03:35,574 - django.request - WARNING - Not Found: /ingredients/user_recipe/1/new_comment/
+2022-11-30 17:03:35,621 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 17:16:17,755 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 17:19:42,764 - django.request - ERROR - Internal Server Error: /ingredients/user_recipe/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endcomment'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 160: 'endcomment', expected 'endblock'. Did you forget to register or load this tag?
+2022-11-30 17:19:56,086 - root - INFO - ================ recipe all data
+2022-11-30 17:19:57,878 - django.request - ERROR - Internal Server Error: /ingredients/user_recipe/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endcomment'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 160: 'endcomment', expected 'endblock'. Did you forget to register or load this tag?
+2022-11-30 17:19:57,957 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 17:41:27,644 - root - INFO - ================ recipe all data
+2022-11-30 17:43:39,160 - django.utils.autoreload - INFO - C:\gittest\project03_prj\blog\admin.py changed, reloading.
+2022-11-30 18:20:09,643 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 18:21:54,876 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 18:22:32,012 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 18:29:18,690 - django.request - ERROR - Internal Server Error: /ingredients/user_recipe/1/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'provider_login_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 163: 'provider_login_url'. Did you forget to register or load this tag?
+2022-11-30 18:32:13,509 - root - INFO - ================ recipe all data
+2022-11-30 18:34:38,630 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 18:35:51,806 - django.utils.autoreload - INFO - C:\gittest\project03_prj\blog\admin.py changed, reloading.
+2022-11-30 18:36:07,627 - django.utils.autoreload - INFO - C:\gittest\project03_prj\blog\admin.py changed, reloading.
+2022-11-30 18:36:42,163 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 18:38:08,730 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 18:38:31,791 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\admin.py changed, reloading.
+2022-11-30 18:39:41,455 - django.request - WARNING - Not Found: /ingredients/user_recipe/2/new_comment/
+2022-11-30 18:42:14,367 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:42:21,877 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:42:30,271 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:42:36,292 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:42:42,005 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:42:52,444 - django.request - WARNING - Not Found: /ingredients/user_recipe/2/new_comment/
+2022-11-30 18:42:55,245 - django.request - WARNING - Not Found: /ingredients/user_recipe/2/new_comment/
+2022-11-30 18:43:50,904 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:44:50,101 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:44:56,428 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:45:37,744 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 18:47:09,242 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 18:47:27,785 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 18:48:20,614 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 18:56:19,439 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-11-30 19:06:57,694 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 19:07:14,219 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 19:11:58,258 - django.utils.autoreload - INFO - C:\gittest\project03_prj\blog\forms.py changed, reloading.
+2022-11-30 22:11:31,631 - root - INFO - ================ recipe all data
+2022-11-30 22:12:21,786 - root - INFO - ================ recipe all data
+2022-11-30 22:12:27,278 - root - INFO - ================ recipe all data
+2022-11-30 22:13:05,097 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 22:14:07,430 - root - INFO - Everything is normal. Relax!
+2022-11-30 22:14:07,430 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 22:14:07,430 - root - ERROR - Something unexpected and important happened.
+2022-11-30 22:14:07,430 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 22:15:48,627 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 22:15:59,210 - root - INFO - Everything is normal. Relax!
+2022-11-30 22:15:59,211 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 22:15:59,212 - root - ERROR - Something unexpected and important happened.
+2022-11-30 22:15:59,213 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 22:16:46,813 - root - INFO - Everything is normal. Relax!
+2022-11-30 22:16:46,815 - root - WARNING - Something unexpected but not important happend.
+2022-11-30 22:16:46,815 - root - ERROR - Something unexpected and important happened.
+2022-11-30 22:16:46,816 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-11-30 22:22:50,462 - root - INFO - ================ recipe all data
+2022-11-30 22:23:11,713 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 22:42:32,212 - django.request - WARNING - Not Found: /ingredients/tag/양파절임/
+2022-11-30 22:42:32,352 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 22:42:40,004 - django.request - WARNING - Not Found: /ingredients/tag/양파절임/
+2022-11-30 22:44:20,334 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 22:44:29,198 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 22:44:34,210 - django.request - WARNING - Not Found: /ingredients/tag/양파절임/
+2022-11-30 22:44:34,306 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 22:45:05,525 - django.request - WARNING - Not Found: /ingredients/tag/간장계란밥/
+2022-11-30 22:45:05,650 - django.request - WARNING - Not Found: /favicon.ico
+2022-11-30 22:46:01,743 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-11-30 22:46:09,127 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\urls.py changed, reloading.
+2022-12-02 04:56:36,804 - root - INFO - ================ recipe all data
+2022-12-02 04:58:23,953 - root - INFO - ================ recommend
+2022-12-02 04:58:23,956 - root - INFO - recommending.....
+2022-12-02 04:59:15,869 - root - INFO - ================ delete_all
+2022-12-02 04:59:15,896 - root - INFO - deleted.....
+2022-12-02 05:12:08,040 - root - INFO - ================ recipe all data
+2022-12-02 21:28:01,940 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 21:28:07,245 - django.request - ERROR - Internal Server Error: /ingredients/mypage/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 420, in UseTrashIView
+    vpn_success = Ingredients.objects.all().order_by('updated_at')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1644, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'updated_at' into field. Choices are: author, author_id, expiration_date, id, ingredient
+2022-12-02 21:30:32,452 - django.request - ERROR - Internal Server Error: /ingredients/mypage/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 420, in UseTrashIView
+    vpn_success = Ingredients.objects.all().order_by('updated_at')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1644, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'updated_at' into field. Choices are: author, author_id, expiration_date, id, ingredient
+2022-12-02 21:30:32,576 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 21:31:23,656 - django.request - ERROR - Internal Server Error: /ingredients/mypage/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 420, in UseTrashIView
+    vpn_success = Ingredients.objects.all().order_by('updated_at')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1644, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'updated_at' into field. Choices are: author, author_id, expiration_date, id, ingredient
+2022-12-02 21:34:21,464 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-12-02 21:34:42,027 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-12-02 21:35:14,488 - django.request - ERROR - Internal Server Error: /ingredients/mypage/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\ingredients\views.py", line 420, in UseTrashIView
+    vpn_success = Ingredients.objects.all().order_by('updated_at')
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1644, in order_by
+    obj.query.add_ordering(*field_names)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 2202, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\query.py", line 1709, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'updated_at' into field. Choices are: author, author_id, expiration_date, id, ingredient
+2022-12-02 21:35:14,586 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 21:37:08,242 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
+2022-12-02 21:40:45,704 - root - INFO - ================ recommend
+2022-12-02 21:40:45,715 - root - INFO - recommending.....
+2022-12-02 21:40:45,718 - root - INFO - recommending.....
+2022-12-02 21:49:16,461 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-12-02 21:50:18,874 - root - INFO - Everything is normal. Relax!
+2022-12-02 21:50:18,874 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 21:50:18,875 - root - ERROR - Something unexpected and important happened.
+2022-12-02 21:50:18,875 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 21:50:38,824 - root - INFO - Everything is normal. Relax!
+2022-12-02 21:50:38,825 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 21:50:38,825 - root - ERROR - Something unexpected and important happened.
+2022-12-02 21:50:38,825 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 21:59:59,663 - root - INFO - ================ recommend
+2022-12-02 21:59:59,668 - root - INFO - recommending.....
+2022-12-02 21:59:59,673 - root - INFO - recommending.....
+2022-12-02 22:00:06,171 - root - INFO - ================ Use_all
+2022-12-02 22:10:07,005 - root - INFO - Everything is normal. Relax!
+2022-12-02 22:10:07,005 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 22:10:07,006 - root - ERROR - Something unexpected and important happened.
+2022-12-02 22:10:07,006 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 22:10:23,448 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 22:23:49,066 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\models.py changed, reloading.
+2022-12-02 22:38:43,415 - root - INFO - Everything is normal. Relax!
+2022-12-02 22:38:43,416 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 22:38:43,416 - root - ERROR - Something unexpected and important happened.
+2022-12-02 22:38:43,418 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 22:39:08,437 - root - INFO - ================ Use_all
+2022-12-02 22:40:05,123 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 22:40:46,178 - root - INFO - Everything is normal. Relax!
+2022-12-02 22:40:46,180 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 22:40:46,180 - root - ERROR - Something unexpected and important happened.
+2022-12-02 22:40:46,181 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 22:40:59,618 - root - INFO - Everything is normal. Relax!
+2022-12-02 22:40:59,619 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 22:40:59,619 - root - ERROR - Something unexpected and important happened.
+2022-12-02 22:40:59,619 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 22:41:09,530 - root - INFO - ================ Use_all
+2022-12-02 22:41:15,675 - root - INFO - ================ Use_all
+2022-12-02 22:47:14,922 - root - INFO - Everything is normal. Relax!
+2022-12-02 22:47:14,922 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 22:47:14,923 - root - ERROR - Something unexpected and important happened.
+2022-12-02 22:47:14,923 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 22:53:51,706 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 22:54:09,150 - root - INFO - ================ Use_all
+2022-12-02 23:03:44,193 - django.utils.autoreload - INFO - C:\gittest\project03_prj\ingredients\views.py changed, reloading.
+2022-12-02 23:17:16,919 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 23:20:19,818 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 23:28:32,198 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-02 23:29:13,805 - django.request - ERROR - Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\gittest\project03_prj\single_pages\views.py", line 45, in signup
+    user = User.objects.create_user(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 812, in save
+    self.save_base(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 863, in save_base
+    updated = self._save_table(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\query.py", line 1790, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\models\sql\compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\user\anaconda3\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+2022-12-02 23:30:02,676 - django.security.csrf - WARNING - Forbidden (CSRF token from POST incorrect.): /signup/
+2022-12-02 23:32:50,461 - root - INFO - ================ recipe all data
+2022-12-02 23:33:00,308 - root - INFO - ================ recipe all data
+2022-12-02 23:35:05,725 - root - INFO - Everything is normal. Relax!
+2022-12-02 23:35:05,726 - root - WARNING - Something unexpected but not important happend.
+2022-12-02 23:35:05,726 - root - ERROR - Something unexpected and important happened.
+2022-12-02 23:35:05,727 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-02 23:35:46,617 - root - INFO - ================ Use_all
+2022-12-03 00:08:29,882 - django.request - WARNING - Not Found: /favicon.ico
+2022-12-03 00:12:16,523 - root - INFO - ================ recipe all data
+2022-12-03 00:12:21,963 - root - INFO - ================ recipe all data
+2022-12-03 00:12:58,181 - root - INFO - Everything is normal. Relax!
+2022-12-03 00:12:58,182 - root - WARNING - Something unexpected but not important happend.
+2022-12-03 00:12:58,183 - root - ERROR - Something unexpected and important happened.
+2022-12-03 00:12:58,184 - root - CRITICAL - OMG!!! A critical error happend and the code cannot run!
+2022-12-03 00:13:07,554 - root - INFO - ================ recommend
+2022-12-03 00:13:07,562 - root - INFO - recommending.....
+2022-12-03 00:13:30,180 - root - INFO - ================ Use_all
